@@ -1,24 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sections/header.css">
-    <link rel="icon" type="image/png" href="assets/Icon.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sections/header.css">
+    <link rel="icon" type="image/png" href="../assets/Icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-    <title>Positivelok</title>
-  </head>
+</head>
 
-
-  <body>
-
-    <header>
-      <!--Navbar starts-->
+<body>
+    
+<!--Navbar starts-->
       <div id="navbar"></div> 
         <script>
-            fetch('html/navbar.html') // Path to navbar.html
+            fetch('../html/navbar.html') // Path to navbar.html
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load navbar.');
                     return response.text();
@@ -28,20 +25,20 @@
                 })
                 .catch(error => console.error(error));
         </script>
-    <!-- Navbar ends -->
-    </header>
-    
-<script type="module">
-  fetch('html/navbar.html')
+<!-- Navbar ends -->
+
+ <script type="module">
+  fetch('../html/navbar.html')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load navbar.');
       return response.text();
     })
     .then(html => {
       document.getElementById('navbar').innerHTML = html;
-      import('/js/script.js');
+      import('../js/script.js');
     })
     .catch(error => console.error(error));
 </script>
-  </body>
+
+</body>
 </html>
