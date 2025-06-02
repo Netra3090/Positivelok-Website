@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/Icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Positivelok</title>
   </head>
@@ -17,7 +18,15 @@
           <img src="assets/logo.png" alt="Positivelok">
             <div class="header__logo-overlay"></div>
         </div>
-        <ul class="header__menu">
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars" id="menu-bar"></i>
+          </div>
+
+        <ul class="header__menu" id="nav-menu">
+          <li class="close-icon" id="close-button">
+          <i class="fa-solid fa-xmark"></i>
+          </li>
           <li>
             <a href="#">Home</a>
           </li>
@@ -38,11 +47,7 @@
           </li>
         </ul>
 
-        <!-- <ul class="header__menu-mobile" data-aos="fade-down">
-          <li>
-            <img src="assets/menu.svg" alt="menu" />
-          </li>
-        </ul> -->
+        
 
       </nav>
     </header>
