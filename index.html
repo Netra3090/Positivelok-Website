@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sections/header.css">
+    <link rel="stylesheet" href="css/sections/carousel.css">
     <link rel="icon" type="image/png" href="assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">  
 
@@ -14,7 +15,7 @@
 
   <body>
 
-    <header>
+    <header class="header">
       <!--Navbar starts-->
       <div id="navbar"></div> 
         <script>
@@ -30,7 +31,54 @@
         </script>
     <!-- Navbar ends -->
     </header>
-    
+
+<section class="carousel">
+  <div class="slider">
+    <!-- radio buttons must come before .slides, and be siblings -->
+    <input type="radio" name="radio-btn" id="radio1" checked>
+    <input type="radio" name="radio-btn" id="radio2" >
+    <input type="radio" name="radio-btn" id="radio3" >
+    <input type="radio" name="radio-btn" id="radio4" >
+
+    <!-- slides -->
+    <div class="slides">
+      <div class="slide"><img src="assets/1.jpg" alt=""></div>
+      <div class="slide"><img src="assets/2.jpg" alt=""></div>
+      <div class="slide"><img src="assets/3.jpg" alt=""></div>
+      <div class="slide"><img src="assets/4.jpg" alt=""></div>
+    </div>
+
+    <!-- auto nav -->
+    <div class="navigation__auto">
+      <div class="auto__btn1"></div>
+      <div class="auto__btn2"></div>
+      <div class="auto__btn3"></div>
+      <div class="auto__btn4"></div>
+    </div>
+
+    <!-- manual nav -->
+    <div class="navigation__manual">
+      <label for="radio1" class="manual__btn"></label>
+      <label for="radio2" class="manual__btn"></label>
+      <label for="radio3" class="manual__btn"></label>
+      <label for="radio4" class="manual__btn"></label>
+    </div>
+  </div>
+</section>
+
+
+<script type="text/javascript"> /*Carousel */
+  var counter=1;
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+      counter = 1;
+    }
+  },5000);
+
+</script>
+
 <script type="module">
   fetch('html/navbar.html')
     .then(response => {
@@ -45,3 +93,5 @@
 </script>
   </body>
 </html>
+
+

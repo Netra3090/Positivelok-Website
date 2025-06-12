@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.carousel {
+    margin: 0;
+    padding:0;
+    width: 100vw;
+    height: calc(100vh - 122.69px);
+    position: relative;
+    top: 122.69px;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: margin-left 1s ease-in-out;
+    will-change: margin-left;
+}
+
+.slider input {
+    display: none;
+}
+
+.slide {
+    width: 100vw;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* css for manual slide navigation */
+.navigation__manual {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom : 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.manual__btn {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin: 0 10px;
+}
+
+.manual__btn:not(:last-child){
+    margin-right: 40px;    
+}
+
+.manual__btn:hover {
+    background: black;
+}
+
+#radio1:checked ~ .slides {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .slides {
+    margin-left: -100vw;    
+}
+
+#radio3:checked ~ .slides{
+    margin-left: -200vw;    
+}
+
+#radio4:checked ~ .slides {
+    margin-left: -300vw;   
+}
+
+
+/* css for automatic navigation */
+.navigation__auto {
+    position: absolute;
+    display: flex;
+    transform: translateX(-50%);
+    left: 50%;
+    justify-content: center;
+    bottom: 20px;
+    z-index: 1;
+}
+
+.navigation__auto div {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    margin: 0 10px;
+
+}
+
+.navigation__auto div:not(:last-child){
+    margin-right: 40px;  
+}
+
+#radio1:checked ~ .navigation__auto .auto__btn1 {
+    background: black;
+}
+
+#radio2:checked ~ .navigation__auto .auto__btn2 {
+    background: black;
+}
+
+#radio3:checked ~ .navigation__auto .auto__btn3 {
+    background: black;
+}
+
+#radio4:checked ~ .navigation__auto .auto__btn4 {
+    background: black;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        /* height: calc(100vh - 70.73px); increase if header gets taller */
+        top: 70.73px; 
+    }
+}
