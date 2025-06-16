@@ -3,12 +3,12 @@ html {
 }
 
 .carousel {
-    margin: 0;
-    padding:0;
+    margin-bottom: 40px;
+    padding:0px;
     width: 100vw;
     height: calc(100vh - 122.69px);
     position: relative;
-    top: 122.69px;
+    margin-top: 122.69px;
     overflow: hidden;
 }
 
@@ -131,6 +131,6 @@ html {
 @media screen and (max-width: 768px) {
     .carousel {
         /* height: calc(100vh - 70.73px); increase if header gets taller */
-        top: 70.73px; 
+        margin-top: 70.73px; 
     }
 }

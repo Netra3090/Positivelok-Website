@@ -26,7 +26,20 @@ body {
   margin: 0;
   font-family: var(--plus-jakarta-sans);
   color: #000;
+  overflow-x: hidden;
+  padding-bottom: 60px;
 }
+
+
+.container{
+max-width: 1200px;
+margin:0 auto;
+padding: 0 20px;
+}
+
+/* @media screen (max width:768px){
+  
+} */
 
 
 
