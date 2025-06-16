@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sections/footer.css">
     <link rel="stylesheet" href="../css/sections/header.css">
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -27,18 +28,23 @@
         </script>
 <!-- Navbar ends -->
 
- <script type="module">
-  fetch('../html/navbar.html')
-    .then(response => {
-      if (!response.ok) throw new Error('Failed to load navbar.');
-      return response.text();
-    })
-    .then(html => {
-      document.getElementById('navbar').innerHTML = html;
-      import('../js/script.js');
-    })
-    .catch(error => console.error(error));
-</script>
+
+<!--Footer starts-->
+<footer class="footer" id="footer">
+      <div id="footer"></div> 
+        <script>
+            fetch('../html/footer.html') // Path to navbar.html
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load footer.');
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+                })
+                .catch(error => console.error(error));
+        </script>
+</footer>
+<!-- Footer ends -->
 
 </body>
 </html>

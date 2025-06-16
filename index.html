@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/sections/header.css">
     <link rel="stylesheet" href="css/sections/carousel.css">
     <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/footer.css">
     <link rel="icon" type="image/png" href="assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">  
 
@@ -127,6 +128,24 @@
   </div>
 
 </section>
+
+<!--Footer starts-->
+<footer class="footer" id="footer">
+      <div id="footer"></div> 
+        <script>
+            fetch('html/footer.html') // Path to navbar.html
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load footer.');
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+                })
+                .catch(error => console.error(error));
+        </script>
+</footer>
+<!-- Footer ends -->
+
 
 
 <script type="text/javascript"> /*Carousel */
