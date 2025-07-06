@@ -21,7 +21,7 @@ footer.footer{
     flex-wrap: wrap;
     padding: 50px;
     color: #ebe5e5;
-    background-color: #011c39;
+    background-color: var(--secondary-color);
 }
 
 .footer > *{
@@ -90,7 +90,7 @@ ul.address > li {
 }
 
 .footer a:hover{
-    color: blue;
+    color: black;
 }
 
 .footer-right {
