@@ -31,7 +31,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); /* responsive columns */
   gap: 30px;
-  padding: 60px;
   background: none;
 }
 

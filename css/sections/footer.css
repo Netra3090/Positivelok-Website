@@ -73,6 +73,7 @@ footer.footer{
     margin-bottom: 10px;
     max-width: 300px;
     word-wrap: break-word;
+    /* color: white; */
 }
 
 ul.address > li {
