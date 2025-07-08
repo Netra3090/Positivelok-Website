@@ -1,8 +1,15 @@
 
 .about-us-body{
     height: 100%;
-    margin-bottom: 8%;
     background-color: var(--primary-color);
+}
+
+.wrapper-halfbody{
+    background-image: url('../../assets/about-us/about-us-background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    padding: 0 8% 10% 8%;
+
 }
 
 .location-heading{
@@ -25,7 +32,7 @@
     padding: 20px 40px;
     text-align: center;
     padding-bottom: 10px;
-    margin-top: 3%;
+    padding-top: 60px;
     margin-bottom: 5%;
     text-transform: uppercase;
 }
@@ -42,6 +49,7 @@
     background-color:#aaa7a7;
 }
 
+
 .container p{
     padding: 30px 40px;
     font-family: var(--plus-jakarta-sans);
@@ -50,9 +58,8 @@
 }
 
 .container{
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0.5);
     border-radius: 10px;
-    margin-bottom: 8%;
 }
 
 
@@ -133,6 +140,11 @@
 }
 
 @media screen and (max-width:768px){
+
+    .wrapper-halfbody{
+        background-size: cover;
+    }
+
     .about-us-details{
         padding: 20px 30px;
     }
