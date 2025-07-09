@@ -23,6 +23,8 @@
                 })
                 .then(html => {
                     document.getElementById('navbar').innerHTML = html;
+                    import('/js/script.js');
+
                 })
                 .catch(error => console.error(error));
         </script>
