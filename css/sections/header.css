@@ -73,6 +73,7 @@ a.active {
 
 .header__menu button:hover {
     cursor: pointer;
+    background-color: #0d69bf;
 }
 
 .hamburger {

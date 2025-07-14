@@ -73,9 +73,10 @@
     padding: 2%;
 }
 
-.row {
+.column {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 .label {
@@ -88,6 +89,42 @@
     font-size: 18px;
     margin-top: 10%;
     line-height: 130%;
+}
+
+.contact-number {
+    padding-top: 2%;
+    width: 100%;
+}
+
+.contact-number li{
+    list-style: none;
+    padding: 3%;
+    width: 100%;
+}
+
+.contact-number i {
+    padding-right: 5%;
+    padding-top: 4%;
+}
+
+
+.email {
+  display: flex;
+  align-items: flex-start;
+  gap: 5%;
+  padding-top: 4%;
+}
+
+.email-icon {
+  height: 100%;
+  padding-top: 2%;
+}
+
+.email-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
 }
 
 #au{

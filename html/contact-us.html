@@ -6,8 +6,20 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sections/header.css">
     <link rel="stylesheet" href="../css/sections/footer.css">
+    <link rel="stylesheet" href="../css/sections/contact-us.css">
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "FWyaB2682lAZcOBLU",
+            });
+        })();
+    </script>
+    <script src="../Positivelok_Website/src/script.js"></script>
 
 </head>
 
@@ -29,6 +41,20 @@
                 .catch(error => console.error(error));
         </script>
 <!-- Navbar ends -->
+
+
+<div class="wrapper">
+    <form onsubmit="sendMail(); return false;">
+        <h3>GET IN TOUCH</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email id" required>
+        <input type="text" id="phone" placeholder="Phone no." required>
+        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+        <button>Send</button>
+    </form>
+</div>
+
+
 
 
 <!--Footer starts-->
