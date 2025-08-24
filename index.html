@@ -21,7 +21,7 @@
       <!--Navbar starts-->
       <div id="navbar"></div> 
         <script>
-            fetch('html/navbar.html') // Path to navbar.html
+            fetch('public/navbar.html') // Path to navbar.html
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load navbar.');
                     return response.text();
@@ -131,15 +131,15 @@
 
 <!--Footer starts-->
 <footer class="footer" id="footer">
-      <div id="footer"></div> 
+      <div id="footer-content"></div> 
         <script>
-            fetch('html/footer.html') // Path to navbar.html
+            fetch('public/footer.html') // Path to navbar.html
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load footer.');
                     return response.text();
                 })
                 .then(html => {
-                    document.getElementById('footer').innerHTML = html;
+                    document.getElementById('footer-content').innerHTML = html;
                 })
                 .catch(error => console.error(error));
         </script>
@@ -160,7 +160,7 @@
 
 </script>
 
-<script type="module">
+<!-- <script type="module">
   fetch('html/navbar.html')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load navbar.');
@@ -171,7 +171,7 @@
       import('/js/script.js');
     })
     .catch(error => console.error(error));
-</script>
+</script> -->
   </body>
 </html>
 
