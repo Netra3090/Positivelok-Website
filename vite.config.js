@@ -10,9 +10,9 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'html', dest: '' }, // copies html/ to dist/html/
-        { src: 'css', dest: '' },  // copies css/ to dist/css/
-        { src: 'js', dest: '' }    // copies js/ to dist/js/
+        { src: 'html/**/*', dest: 'html' }, // copies all files & subfolders from html/
+        { src: 'css/**/*', dest: 'css' },   // copies all files & subfolders from css/
+        { src: 'js/**/*', dest: 'js' }      // copies all files & subfolders from js/
       ]
     })
   ]
