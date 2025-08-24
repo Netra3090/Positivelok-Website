@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sections/header.css">
-    <link rel="stylesheet" href="css/sections/carousel.css">
-    <link rel="stylesheet" href="css/sections/hero.css">
-    <link rel="stylesheet" href="css/sections/footer.css">
-    <link rel="icon" type="image/png" href="assets/Icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sections/header.css">
+    <link rel="stylesheet" href="/css/sections/carousel.css">
+    <link rel="stylesheet" href="/css/sections/hero.css">
+    <link rel="stylesheet" href="/css/sections/footer.css">
+    <link rel="icon" type="image/png" href="/assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">  
 
     <title>Positivelok</title>
@@ -21,7 +21,7 @@
       <!--Navbar starts-->
       <div id="navbar"></div> 
         <script>
-            fetch('html/navbar.html') // Path to navbar.html
+            fetch('/html/navbar.html') // Path to navbar.html
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load navbar.');
                     return response.text();
@@ -133,7 +133,7 @@
 <footer class="footer" id="footer">
       <div id="footer"></div> 
         <script>
-            fetch('html/footer.html') // Path to navbar.html
+            fetch('/html/footer.html') // Path to navbar.html
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load footer.');
                     return response.text();
@@ -161,7 +161,7 @@
 </script>
 
 <script type="module">
-  fetch('html/navbar.html')
+  fetch('/html/navbar.html')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load navbar.');
       return response.text();
