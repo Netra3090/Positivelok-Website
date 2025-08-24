@@ -1,0 +1,6 @@
+import '../css/style.css'
+import '../css/sections/header.css'
+import '../css/sections/carousel.css'
+import '../css/sections/hero.css'
+import '../css/sections/footer.css'
+import './script.js'

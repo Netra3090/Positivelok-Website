@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   build: {
-    outDir: 'dist', // default
-  }
-});
+    outDir: 'dist'
+  },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        { src: 'src/css/**/*', dest: 'css' }
+      ]
+    })
+  ]
+})
