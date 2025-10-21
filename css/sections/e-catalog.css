@@ -1,96 +1,40 @@
 
-.e-catalog-body{
-    background-color: var(--primary-color);
+ .flipbook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
 }
 
-
-.e-catalog-body h1{
-    position: relative;
-    padding: 20px 40px;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 60px;
-    margin-bottom: 5%;
-    text-transform: uppercase;
-}
-
-.e-catalog-body h1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 0;
-    height: 1.5px;
-    width: 120px;
-    background-color:#aaa7a7;
-}
-
-
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); /* responsive columns */
-  gap: 30px;
-  background: none;
-}
-
-.catalog-grid a img {
+.flipbook img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  object-fit: contain;
 }
 
-.product-card{
-    background-color: transparent;
-    cursor: pointer;
-    margin-bottom: 18%;
+.flipbook *,
+.flipbook *::before,
+.flipbook *::after {
+  transition: none !important;
 }
 
-.product-card:hover .product-text{
-    color: var(--secondary-color);
+/* Optional: make covers appear on top */
+.flipbook .cover {
+  transform-origin: center;
+  z-index: 10;
 }
 
-.product-text {
-    display: block;
-    text-decoration: none;
-}
-
-.product-card-body{
-    background-color: transparent;
-    margin-top: 2%;
-}
-
-.product-card-body a {
-    color: #1B1B23;
-}
-
-
-#catalog-text {
-    color: #1B1B23;
-    text-align: center;
-    width: 100%;
-    padding-top: 10px;
+.brochure-button {
+    padding: 10px;
+    margin: 0px 40% 3% 40%;
+    border-radius: 20px;
+    border-color: none;
     font-family: var(--plus-jakarta-sans);
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: bold;
 }
 
-
-@media screen and (max-width:768px) {
-
-    .catalog-grid {
-        display : grid;
-        grid-template-columns: repeat(auto-fit, minmax(35%,1fr));
-    }
-
-    #catalog-text {
-        font-size: 0.85rem;
-    }
-
-    .e-catalog-body .h1 {
-        font-size: 0.85rem;
-    }
+.brochure-button:hover {
+    cursor: pointer;
+    background-color: #DED9D9;
 }
