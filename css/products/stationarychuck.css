@@ -1,0 +1,64 @@
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.product-details-text {
+    display: block;
+    color: black;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-style: var(--plus-jakarta-sans);
+}
+
+.sproduct select {
+    display: block;
+    padding: 5px 10px;
+}
+
+.sproduct input {
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.sproduct input:focus {
+    outline: none;
+}
+
+.enquiry-btn {
+    background: var(--primary-color);
+    opacity: 1;
+    transition: 0.3s all;
+    border: 0.5px solid black;
+    padding: 8px 50px;
+}
+
+.related-products {
+display: flex;
+flex-direction: column;
+}
+
+.wrapper h3::after {
+ content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    height: 1.5px;
+    width: 120px;
+    background-color:#aaa7a7;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}

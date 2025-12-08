@@ -41,7 +41,7 @@ h1 {
     align-items: flex-start;
 }
 
-button {
+.Download {
     display: block;
     margin-left: 25%;
     margin-top: 15px;

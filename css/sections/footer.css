@@ -9,7 +9,7 @@ body{
     font-size: 15px;
 }
 
-span {
+.location {
     color: white;
     font-weight: 600;
     text-transform: uppercase;
