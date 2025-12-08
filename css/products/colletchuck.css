@@ -1,0 +1,97 @@
+
+.item-and-description {
+    display: flex;
+    align-items: center; /* vertically center columns */
+    justify-content: auto;
+    padding: 100px 0;
+    background : linear-gradient(to bottom,#99ccff , white);
+}
+
+.item-image, .item-description {
+    flex: 1;
+}
+
+.item-image {
+    display: flex;
+    justify-content: center;
+}
+
+.item-description{
+    line-height: 35px;
+    padding: 0 25px;
+}
+
+.item-and-description ul {
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 800;
+    font-family: var(--plus-jakarta-sans);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.boxx {
+    display: flex;
+    flex-direction: column;
+    background-color: #c2c2d6;
+    max-width: max-content;
+    padding: 25px ;
+    align-items: flex-start;
+}
+
+button {
+    display: block;
+    margin-left: 25%;
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    border: 0.5px solid black;
+    padding: 10px 60px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+
+
+.container-specs-and-dimension {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 80px 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.downloads img, .downloads button {
+    width: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.downloads table th {
+    text-align: center;
+}

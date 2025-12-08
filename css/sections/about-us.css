@@ -5,11 +5,9 @@
 }
 
 .wrapper-halfbody{
-    background-image: url('../../assets/about-us/about-us-background.jpg');
     background-repeat: no-repeat;
     background-size:cover ;
-    padding: 0 8% 10% 8%;
-
+    padding: 0 8% 5% 8%;
 }
 
 .location-heading{
@@ -58,8 +56,10 @@
 }
 
 .container{
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
+    /* background-color: black; */
+    /* color: white; */
 }
 
 
