@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
-
 @import url("sections/header.css");
 
 
@@ -20,7 +19,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.3s ease;
 }
 
 body {
@@ -31,11 +29,11 @@ body {
 }
 
 
-.container{
+/* .container{
 max-width: 1200px;
 margin:0 auto;
 padding: 0 20px;
-}
+} */
 
 @media screen and (max-width:768px) {
     .container{
@@ -43,5 +41,223 @@ padding: 0 20px;
     }
 }
 
+#home span{
+color: coral;
+}
+
+#home{
+  background-image: url("../assets/Background-index.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+}
+
+.home-container{
+  margin-right: 150px;
+  margin-top: 10%;
+  font-style: var(--playfair-display);
+}
+
+.index-btn{
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-dark);
+  color: #DED9D9;
+  padding: 13px 30px ;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.index-btn:hover{
+  background-color: black;
+}
+
+#intro{
+  text-align: center;
+  padding: 70px 20px  ;
+  font-family: var(--playfair-display);
+  font-size: 2rem;
+  background: linear-gradient(to bottom, #817f7f, white);
+}
+
+
+#new .one img {
+  width: 100%;
+  height: 100%;
+}
+
+#new .one .details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7)
+}
+
+#new .one:hover .details {
+  background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+#new .one:hover .details h2 {
+color: black;
+font-weight: 800;
+font-size: 1.8rem;
+}
+
+
+#new .one .details h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 100px;
+  padding-left: 15px;
+}
+
+#new .one:hover .index-btn {
+    background-color: black;
+}
+
+#new .one .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    padding-left: 20px;
+}
+
+
+/* Products */
+
+.hero__title {
+  position: relative;
+  font-size: 24px; /* adjust as needed */
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  /* margin-top: 150px; centers the block and adds spacing */
+}
+
+.hero__title::after {
+  content: '';
+  display: block;
+  margin: 7px auto 0; /* spacing above line */
+  width: 50px;         /* adjust to match your screenshot */
+  height: 1px;         /* thin line */
+  background-color: #ccc; /* light gray line */
+}
+
+.acc-button {
+    padding: 10px 20px;
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    border: 1px solid white;
+    outline: none;
+    font-size: 15px;
+    font-family: var(--plus-jakarta-sans);
+}
+
+
+.acc-button:hover{
+    background-color: var(--primary-color);
+    color: #000000;
+    cursor: pointer;
+    outline: none; 
+}
+
+.product {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  outline: 1px solid #000;
+  outline-offset: -20px;
+  padding: 25px;
+  text-align: center;
+}
+
+
+.product::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #e0e0e0;
+  pointer-events: none;
+  z-index: 1; /*background layer*/
+}
+
+.product:hover::before {
+  border-color: var(--secondary-dark);
+} 
+
+.product img {
+transition: 0.3s all;
+scale: 0.9;
+
+}
+
+.product:hover img{
+  opacity: 0.8;
+}
+
+.product:hover button {
+  color: var(--secondary-dark);
+}
+.product button {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s all;
+  color: #000;
+  padding: 2px 10px;
+  border: none;
+  background: none;
+  border-radius: 20px;
+}
+
+.product:hover button{
+  background: #000;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#banner {
+  background-image: url('../assets/3.jpg');
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: top 70px center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#banner h1 {
+  color: white;
+  font-weight: bold;
+}
+
+#banner button {
+  background-color: black;
+}
 
 
