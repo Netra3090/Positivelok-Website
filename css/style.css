@@ -85,7 +85,7 @@ color: coral;
   padding: 70px 20px  ;
   font-family: var(--playfair-display);
   font-size: 2rem;
-  background: linear-gradient(to bottom, #817f7f, white);
+  /* background: linear-gradient(to bottom, #817f7f, white); */
 }
 
 
