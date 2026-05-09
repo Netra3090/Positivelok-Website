@@ -243,3 +243,49 @@ body {
     background-attachment: scroll;
   }
 }
+
+/* ================== Navbar Glassmorphism & Animations ================== */
+.glass-navbar {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* ================== Swiper Carousel Adjustments ================== */
+.product-swiper {
+  padding-bottom: 50px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--secondary-color) !important;
+}
+

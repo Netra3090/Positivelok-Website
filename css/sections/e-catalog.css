@@ -1,40 +1,158 @@
+/* ================== Catalog Hero ================== */
+.catalog-hero {
+    background-image: linear-gradient(to right, rgba(9, 64, 114, 0.95) 0%, rgba(9, 64, 114, 0.8) 60%, rgba(9, 64, 114, 0.4) 100%), url('../assets/Background-index.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+}
 
- .flipbook {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto;
+/* ================== Catalog Viewer Stage ================== */
+.catalog-viewer-section {
+    background: #1a1f2e;
+    padding: 60px 0 40px;
+}
+
+.catalog-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.catalog-viewer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #111827;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.05);
+    overflow: hidden;
+    max-width: calc(100vw - 60px);
+}
+
+.flipbook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .flipbook img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .flipbook *,
 .flipbook *::before,
 .flipbook *::after {
-  transition: none !important;
+    transition: none !important;
 }
 
-/* Optional: make covers appear on top */
-.flipbook .cover {
-  transform-origin: center;
-  z-index: 10;
+/* ================== Flipbook Controls ================== */
+.flipbook-controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
 }
 
-.brochure-button {
-    padding: 10px;
-    margin: 0px 40% 3% 40%;
-    border-radius: 20px;
-    border-color: none;
-    font-family: var(--plus-jakarta-sans);
-    font-weight: bold;
-}
-
-.brochure-button:hover {
+.flip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 22px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
-    background-color: #DED9D9;
+    transition: all 0.3s ease;
+}
+
+.flip-btn:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(13, 91, 162, 0.4);
+}
+
+.page-indicator {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 120px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* ================== Download CTA Card ================== */
+.catalog-cta {
+    background: #f9fafb;
+}
+
+.catalog-cta-card {
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-color) 100%);
+    box-shadow: 0 10px 40px rgba(9, 64, 114, 0.3);
+}
+
+.catalog-icon-wrap {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.catalog-download-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #fff;
+    color: var(--secondary-dark);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.catalog-download-btn:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+    .catalog-viewer-wrap {
+        padding: 15px;
+    }
+    .flipbook-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 16px;
+    }
+    .catalog-cta-card {
+        text-align: center;
+    }
+    .catalog-icon-wrap {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
 }

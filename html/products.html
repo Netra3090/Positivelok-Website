@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Positivelok</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sections/header.css">
     <link rel="stylesheet" href="../css/sections/footer.css">
@@ -10,98 +11,217 @@
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    
-<!--Navbar starts-->
-      <div id="navbar"></div> 
-        <script>
-            fetch('/html/navbar.html')
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load navbar.');
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('navbar').innerHTML = html;
-                })
-                .catch(error => console.error(error));
-        </script>
-<!-- Navbar ends -->
 
-<!-- Main content starts here -->
-        <div class="wrapper">
-            <h1 class="page-heading">PRODUCTS</h1>
+<!-- Navbar -->
+<div id="navbar"></div>
+<script>
+    fetch('/html/navbar.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load navbar.');
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+        })
+        .catch(error => console.error(error));
+</script>
+
+<!-- Page Hero Banner -->
+<section class="products-hero">
+    <div class="container h-100 d-flex align-items-center">
+        <div data-aos="fade-up">
+            <p class="text-uppercase tracking-wider mb-2" style="color: var(--secondary-color); font-weight: 700;">Positivelok</p>
+            <h1 class="display-4 fw-bold text-white mb-3">Our Products</h1>
+            <p class="text-light opacity-75 fs-5">Precision-engineered chucks & cylinders for every machining need.</p>
+            <nav aria-label="breadcrumb" class="mt-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html" class="text-light opacity-75 text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Products</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<main class="py-5">
+    <div class="container py-4">
+
+        <!-- Section: Power Chucks -->
+        <div class="mb-5" data-aos="fade-up">
+            <div class="products-section-header mb-4">
+                <h2 class="products-section-title">Power Chucks</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/products/Power-Chuck.jpg" alt="Power Chuck" class="img-fluid">
+                            <div class="prod-overlay">
+                                <a href="Products/stationarychuck.html" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Power Chuck</h4>
+                            <p class="prod-desc">High-precision hydraulic power chucks for automated CNC machining.</p>
+                            <a href="Products/stationarychuck.html" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/products/Special-Purpose-Power-Chuck.jpg" alt="SP Power Chuck" class="img-fluid">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">SP Power Chuck</h4>
+                            <p class="prod-desc">Special purpose chucks designed for custom and complex machining jobs.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/products/Collet-Chucks.jpg" alt="Collet Chuck" class="img-fluid">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Collet Chuck</h4>
+                            <p class="prod-desc">Precision collet chucks ensuring superior concentricity and clamping force.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/products/Rotary-Cylinders.jpg" alt="Rotary Cylinders" class="img-fluid">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Rotary Cylinders</h4>
+                            <p class="prod-desc">High-performance rotary cylinders for seamless hydraulic power transmission.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-<section id="hero" class="my-5 pb-5">
-  <!-- <h1 class="hero__title  mt-5 py-5 ">Shop by Category</h1> -->
+        <!-- Divider -->
+        <hr class="my-5 opacity-25">
 
-  <div class="row mx-auto container-fluid">
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <div class="product-inner">
-        <img class="img-fluid mb-3" src="../assets/products/Power-Chuck.jpg" alt="Power Chuck">
-        <button onclick="window.location.href='Products/stationarychuck.html'" class="product-title">Power Chuck</button>
-      </div>
-         </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="../assets/products/Collet-Chucks.jpg" alt="Collet Chuck">
-      <button class="product-title">Collet Chuck</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="../assets/products/Rotary-Cylinders.jpg" alt="Rotary Cylinders">
-      <button class="product-title">Rotary Cylinders</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="../assets/products/Special-Purpose-Power-Chuck.jpg" alt="SP Power Chuck">
-      <button class="product-title">SP Power Chuck</button>
-    </div>
-  </div>
+        <!-- Section: Accessories -->
+        <div class="mb-5" data-aos="fade-up">
+            <div class="products-section-header mb-4">
+                <h2 class="products-section-title">Accessories</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/1.jpg" alt="Soft Jaws" class="img-fluid" style="aspect-ratio:1/1; object-fit:cover;">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Soft Jaws</h4>
+                            <p class="prod-desc">Custom soft jaws for gentle and accurate workpiece gripping.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/2.jpg" alt="Hard Jaws" class="img-fluid" style="aspect-ratio:1/1; object-fit:cover;">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Hard Jaws</h4>
+                            <p class="prod-desc">Heavy duty hard jaws engineered for maximum grip and longevity.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/3.jpg" alt="Backplates" class="img-fluid" style="aspect-ratio:1/1; object-fit:cover;">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Backplates</h4>
+                            <p class="prod-desc">Precision backplates for accurate and secure chuck mounting.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/products/Rotary-Cylinders.jpg" alt="Stationary Cylinders" class="img-fluid" style="aspect-ratio:1/1; object-fit:cover;">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Stationary Cylinders</h4>
+                            <p class="prod-desc">Fixed hydraulic cylinders for stationary clamping applications.</p>
+                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="row mx-auto container-fluid">
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <div class="product-inner">
-        <img class="img-fluid mb-3" src="../assets/products/Power-Chuck.jpg" alt="Power Chuck">
-        <button onclick="window.location.href='Products/stationarychuck.html'" class="product-title">Power Chuck</button>
-      </div>
-         </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="../assets/products/Collet-Chucks.jpg" alt="Collet Chuck">
-      <button class="product-title">Collet Chuck</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="../assets/products/Rotary-Cylinders.jpg" alt="Rotary Cylinders">
-      <button class="product-title">Rotary Cylinders</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="../assets/products/Special-Purpose-Power-Chuck.jpg" alt="SP Power Chuck">
-      <button class="product-title">SP Power Chuck</button>
-    </div>
-  </div>
- 
-</section>  
+        <!-- CTA Banner -->
+        <div class="products-cta-banner rounded-4 p-5 text-center mt-5" data-aos="zoom-in">
+            <h3 class="fw-bold text-white mb-3">Need a Custom Solution?</h3>
+            <p class="text-light opacity-75 mb-4 fs-5">Our engineering team is ready to design precision components tailored to your exact requirements.</p>
+            <a href="/html/contact-us.html" class="acc-button text-decoration-none me-3">Contact Us <i class="fas fa-arrow-right ms-2"></i></a>
+            <a href="/html/e-catalog.html" class="prod-cta-outline text-decoration-none">E-Catalog <i class="fas fa-download ms-2"></i></a>
+        </div>
 
+    </div>
+</main>
 
-<!-- Main content ends here -->
-
-<!--Footer starts-->
+<!-- Footer -->
 <footer class="footer" id="footer-container">
-      <div id="footer"></div> 
-        <script>
-            fetch('/html/footer.html')
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load footer.');
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('footer-container').innerHTML = html;
-                })
-                .catch(error => console.error(error));
-        </script>
+    <div id="footer"></div>
+    <script>
+        fetch('/html/footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to load footer.');
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById('footer-container').innerHTML = html;
+            })
+            .catch(error => console.error(error));
+    </script>
 </footer>
-<!-- Footer ends -->
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 40 });
+</script>
 </body>
 </html>
