@@ -1,37 +1,29 @@
-
-    <header>
-      <nav class="header__nav">
-        <div class="header__logo">
-          <img src="/assets/logo.png" alt="Positivelok">
-        </div>
-
-        <div class="hamburger" id="hamburger">
-            <i class="fa-solid fa-bars" id="menu-bar"></i>
-          </div>
-
-        <ul class="header__menu" id="nav-menu">
-          <li class="close-icon" id="close-button">
-          <i class="fa-solid fa-xmark"></i>
-          </li>
-          <li>
-            <a href="/index.html">Home</a>
-          </li>
-          <li>
-            <a href="/html/products.html">Products</a>
-          </li>
-          <li>
-            <a href="/html/e-catalog.html">E-Catalog</a>
-          </li>
-          <li>
-            <a href="/html/about-us.html">About Us</a>
-          </li>
-          <li>
-            <a href="/html/contact-us.html">
-            <button>Contact Us</button>
-            </a>
-          </li>
-        </ul>
-
-      </nav>
-    </header>
-
+<nav class="navbar navbar-expand-md bg-white fixed-top shadow-sm py-2">
+  <div class="container-fluid px-lg-5">
+    <a class="navbar-brand" href="/index.html">
+      <img src="/assets/logo.png" alt="Positivelok" height="75">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center" style="font-family: var(--plus-jakarta-sans);">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-dark me-lg-3" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-dark me-lg-3" href="/html/products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-dark me-lg-3" href="/html/e-catalog.html">E-Catalog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-dark me-lg-3" href="/html/about-us.html">About Us</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-3 mt-md-0">
+          <a href="/html/contact-us.html" class="btn text-white px-4 py-2 fw-semibold" style="background-color: var(--secondary-color); border-radius: 5px;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

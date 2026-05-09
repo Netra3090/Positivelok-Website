@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/sections/footer.css">
     <link rel="icon" type="image/png" href="assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
       <title>Positivelok</title>
   </head>
 
@@ -18,134 +18,207 @@
     <header class="header fixed-top">
       <!--Navbar starts-->
       <div id="navbar"></div> 
-        <script>
-            fetch('html/navbar.html') // Path to navbar.html
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load navbar.');
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('navbar').innerHTML = html;
-                })
-                .catch(error => console.error(error));
-        </script>
     <!-- Navbar ends -->
      </header> 
 
+    <main>
 
+      <!-- Hero Section -->
+      <section id="home">
+        <div class="home-container container d-flex justify-content-end">
+          <div class="home-content text-end">
+            <h5 class="text-uppercase tracking-wider">Premium Quality Chucks & Cylinders</h5>
+            <h1 class="display-3 fw-bold mb-4 text-white">Precision Engineering <br>for the Future</h1>
+            <p class="fs-5 mb-5 opacity-75 text-white">Positivelok offers the highest quality chucks and cylinders for your advanced machining needs. Experience zero compromise on reliability.</p>
+            <a href="#hero" class="acc-button text-decoration-none">Explore Products <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </section>
 
-<section id="home">
-  <div class="home-container">
-    <h5>BEST PRODUCTS</h5>
-    <h1><span>BEST PRICES</span> this year</h1>
-    <p>Shoomatic offers on your very comfortable item <br>on walking and exercises.</p>
-    <button class="acc-button">Shop Now</button>
+      <!-- Intro Section -->
+      <section id="intro" class="py-5 bg-white">
+        <div class="container my-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 text-start">
+              <h2 class="display-5 fw-bold text-dark mb-4">6 Decades of Excellence</h2>
+              <p class="fs-5 text-muted mb-4">Serving the metalworking industry for more than 60 years. Our commitment to innovation and quality has made us the trusted choice for engineering professionals worldwide.</p>
+              <a href="html/about-us.html" class="index-btn-outline text-decoration-none">Learn More About Us <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="col-lg-6">
+              <div class="intro-img-wrapper position-relative">
+                <img src="assets/2.jpg" class="img-fluid rounded-4 shadow-lg intro-img position-relative z-1" alt="Positivelok Expertise">
+                <div class="intro-shape position-absolute rounded-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  </div>
-</section>
+      <!-- Core Features Grid -->
+      <section id="features" class="py-5 bg-light">
+        <div class="container py-5">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="feature-card bg-white rounded-4 shadow-sm overflow-hidden h-100 d-flex flex-column">
+                <div class="feature-img-wrapper">
+                  <img src="assets/1.jpg" class="img-fluid w-100" alt="Engineering">
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <h3 class="h4 fw-bold mb-3 text-dark">Engineering at its peak</h3>
+                  <p class="text-muted mb-4 flex-grow-1">Unmatched precision for your most demanding applications.</p>
+                  <a href="html/about-us.html" class="feature-link text-decoration-none mt-auto">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="feature-card bg-white rounded-4 shadow-sm overflow-hidden h-100 d-flex flex-column">
+                <div class="feature-img-wrapper">
+                  <img src="assets/2.jpg" class="img-fluid w-100" alt="Our expertise">
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <h3 class="h4 fw-bold mb-3 text-dark">Our Expertise</h3>
+                  <p class="text-muted mb-4 flex-grow-1">Decades of knowledge forged into every single product.</p>
+                  <a href="html/about-us.html" class="feature-link text-decoration-none mt-auto">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="feature-card bg-white rounded-4 shadow-sm overflow-hidden h-100 d-flex flex-column">
+                <div class="feature-img-wrapper">
+                  <img src="assets/3.jpg" class="img-fluid w-100" alt="Redefining the future">
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <h3 class="h4 fw-bold mb-3 text-dark">Redefining the Future</h3>
+                  <p class="text-muted mb-4 flex-grow-1">Innovative solutions pushing the boundaries of metalworking.</p>
+                  <a href="html/about-us.html" class="feature-link text-decoration-none mt-auto">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="intro">
-  <h1>Serving the metalworking industry<br>for more than 6 decades</h1>
-</section>
+      <!-- Products Section -->
+      <section id="hero" class="py-5 bg-white">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold mb-3 section-title d-inline-block position-relative">Shop by Category</h2>
+            <p class="text-muted fs-5 mt-3">Browse our extensive collection of premium engineering solutions.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/products/Power-Chuck.jpg" class="img-fluid" alt="Power Chuck">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Power Chuck</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Product</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/products/Collet-Chucks.jpg" class="img-fluid" alt="Collet Chuck">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Collet Chuck</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Product</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/products/Rotary-Cylinders.jpg" class="img-fluid" alt="Rotary Cylinders">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Rotary Cylinders</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Product</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/products/Special-Purpose-Power-Chuck.jpg" class="img-fluid" alt="SP Power Chuck">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">SP Power Chuck</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Product</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="new" class="w-100">
-  <div class="row p-0 m-0">
-    <div class="one col-lg-4 col-md-12 col-12 p-0"> 
-      <img class="img-fluid" src="assets/1.jpg" alt="">
-      <div class="details">
-        <h2>Engineering at its peak</h2>
-        <button class="text-uppercase index-btn">Shop Now</button>
-      </div>
-      </div>
-      <div class="one col-lg-4 col-md-12 col-12 p-0"> 
-      <img class="img-fluid" src="assets/2.jpg" alt="">
-      <div class="details">
-        <h2>Our expertise</h2>
-        <button class="text-uppercase index-btn">Shop Now</button>
-      </div>
-      </div>
-      <div class="one col-lg-4 col-md-12 col-12 p-0"> 
-      <img class="img-fluid" src="assets/3.jpg" alt="">
-      <div class="details">
-        <h2>Redefining the future</h2>
-        <button class="text-uppercase index-btn">Shop Now</button>
-      </div>
-      </div>
-  </div>
-</section>
+      <!-- Banner -->
+      <section id="banner" class="py-5 position-relative">
+        <div class="container position-relative z-1 d-flex justify-content-center align-items-center h-100">
+          <div class="banner-content text-center text-white glassmorphism p-4 rounded-4 shadow-lg w-100" style="max-width: 600px;">
+            <h6 class="tracking-wider mb-2 text-uppercase text-light">Discover Excellence</h6>
+            <h2 class="display-6 fw-bold mb-3">Custom Solutions & E-Catalog</h2>
+            <p class="fs-6 mb-4 opacity-75">Explore our complete range of high-precision engineering solutions designed for the future.</p>
+            <a href="html/e-catalog.html" class="banner-btn text-uppercase text-decoration-none px-4 py-2 rounded-pill fw-bold">Request Catalog</a>
+          </div>
+        </div>
+      </section>
 
-<section id="hero" class="my-5 pb-5">
-  <h1 class="hero__title  mt-5 py-5 ">Shop by Category</h1>
+      <!-- Accessories Section -->
+      <section id="other-accessories" class="py-5 bg-white">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold mb-3 section-title d-inline-block position-relative">Other Accessories</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/1.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;" alt="Soft Jaws">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Soft Jaws</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Details</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/2.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;" alt="Hard Jaws">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Hard Jaws</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Details</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/3.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;" alt="Backplates">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Backplates</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Details</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="product-card h-100 bg-white rounded-4 shadow-sm text-center p-4 border border-light">
+                <div class="product-img-box mb-4 overflow-hidden rounded-3">
+                  <img src="assets/products/Rotary-Cylinders.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;" alt="Stationary Cylinders">
+                </div>
+                <h4 class="h5 fw-bold mb-3 text-dark">Stationary Cylinders</h4>
+                <a href="html/products.html" class="product-btn text-decoration-none">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="row mx-auto container-fluid">
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <div class="product-inner">
-        <img class="img-fluid mb-3" src="assets/products/Power-Chuck.jpg" alt="Power Chuck">
-        <button class="product-title">Power Chuck</button>
-      </div>
-         </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="assets/products/Collet-Chucks.jpg" alt="Collet Chuck">
-      <button class="product-title">Collet Chuck</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="assets/products/Rotary-Cylinders.jpg" alt="Rotary Cylinders">
-      <button class="product-title">Rotary Cylinders</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="assets/products/Special-Purpose-Power-Chuck.jpg" alt="SP Power Chuck">
-      <button class="product-title">SP Power Chuck</button>
-    </div>
-  </div>
- 
-</section>  
-
-<section id="banner" class="my-5 py-5">
-  <div class="container">
-    <h4>MID SEASON SALE</h4>
-    <h1>Autumn Collection <br>UP TO 20% OFF</h1>
-    <button class="text-uppercase index-btn">Shop Now</button>
-  </div>
-</section>
-
-<section id="Other-accessories" class="my-5">
-  <h1 class="hero__title  mt-5 py-5 ">Other Accessories</h1>
-
-  <div class="row mx-auto container-fluid">
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <div class="product-inner">
-        <img class="img-fluid mb-3" src="assets/products/Power-Chuck.jpg" alt="Power Chuck">
-        <button class="product-title">Power Chuck</button>
-      </div>
-         </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="assets/products/Collet-Chucks.jpg" alt="Collet Chuck">
-      <button class="product-title">Collet Chuck</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="assets/products/Rotary-Cylinders.jpg" alt="Rotary Cylinders">
-      <button class="product-title">Rotary Cylinders</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-      <img class="img-fluid mb-3" src="assets/products/Special-Purpose-Power-Chuck.jpg" alt="SP Power Chuck">
-      <button class="product-title">SP Power Chuck</button>
-    </div>
-  </div>
- 
-</section> 
+    </main>
 
 
 <!--Footer starts-->
-<footer class="footer" id="footer">
+<footer class="footer" id="footer-container">
       <div id="footer"></div> 
         <script>
-            fetch('html/footer.html') // Path to navbar.html
+            fetch('html/footer.html') // Path to footer.html
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load footer.');
                     return response.text();
                 })
                 .then(html => {
-                    document.getElementById('footer').innerHTML = html;
+                    document.getElementById('footer-container').innerHTML = html;
                 })
                 .catch(error => console.error(error));
         </script>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/sections/products.css">
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
 
 </head>
@@ -19,14 +19,13 @@
 <!--Navbar starts-->
       <div id="navbar"></div> 
         <script>
-            fetch('../html/navbar.html') // Path to navbar.html
+            fetch('/html/navbar.html')
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load navbar.');
                     return response.text();
                 })
                 .then(html => {
                     document.getElementById('navbar').innerHTML = html;
-                    import('/js/script.js');
                 })
                 .catch(error => console.error(error));
         </script>
@@ -44,7 +43,7 @@
     <div class="product text-center col-lg-3 col-md-4 col-12">
       <div class="product-inner">
         <img class="img-fluid mb-3" src="../assets/products/Power-Chuck.jpg" alt="Power Chuck">
-        <button onclick="window.location.href='Products/stationarychuck.html'"class="product-title">Power Chuck</button>
+        <button onclick="window.location.href='Products/stationarychuck.html'" class="product-title">Power Chuck</button>
       </div>
          </div>
     <div class="product text-center col-lg-3 col-md-4 col-12">
@@ -65,7 +64,7 @@
     <div class="product text-center col-lg-3 col-md-4 col-12">
       <div class="product-inner">
         <img class="img-fluid mb-3" src="../assets/products/Power-Chuck.jpg" alt="Power Chuck">
-        <button onclick="window.location.href='Products/stationarychuck.html'"class="product-title">Power Chuck</button>
+        <button onclick="window.location.href='Products/stationarychuck.html'" class="product-title">Power Chuck</button>
       </div>
          </div>
     <div class="product text-center col-lg-3 col-md-4 col-12">
@@ -88,16 +87,16 @@
 <!-- Main content ends here -->
 
 <!--Footer starts-->
-<footer class="footer" id="footer">
+<footer class="footer" id="footer-container">
       <div id="footer"></div> 
         <script>
-            fetch('../html/footer.html') // Path to navbar.html
+            fetch('/html/footer.html')
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load footer.');
                     return response.text();
                 })
                 .then(html => {
-                    document.getElementById('footer').innerHTML = html;
+                    document.getElementById('footer-container').innerHTML = html;
                 })
                 .catch(error => console.error(error));
         </script>
