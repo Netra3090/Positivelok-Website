@@ -1,47 +1,127 @@
-.wrapper {
-    width: 100%;
-    height: 88vh;
-    background: var(--primary-color);
+/* ================== Contact Hero ================== */
+.contact-hero {
+    background-image:
+        linear-gradient(to right, rgba(9, 64, 114, 0.95) 0%, rgba(9, 64, 114, 0.78) 60%, rgba(9, 64, 114, 0.35) 100%),
+        url('../assets/Background-index.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+}
+
+/* ================== Info Cards ================== */
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 22px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 20px rgba(9, 64, 114, 0.1);
+    border-color: rgba(13, 91, 162, 0.15);
+}
+
+.contact-info-icon {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-
-form{
-    background: white;
-    display: flex;
-    flex-direction: column;
-    padding: 2vw 4vw;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-}
-
-form h3{
-    color: #555;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-form input, form textarea {
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
-    outline: none;
-    background: lightgray;
-    font-size: 16px;
-}
-
-form button {
-    padding: 15px;
-    background: black;
+    font-size: 1.1rem;
     color: #fff;
-    font-size: 18px;
-    border: 0;
+    box-shadow: 0 4px 12px rgba(13, 91, 162, 0.25);
+}
+
+/* ================== Form Card ================== */
+.contact-form-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-input {
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-family: var(--plus-jakarta-sans);
+    font-size: 15px;
+    color: #1f2937;
+    background-color: #f9fafb;
     outline: none;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.contact-input::placeholder {
+    color: #9ca3af;
+}
+
+.contact-input:focus {
+    border-color: var(--secondary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(13, 91, 162, 0.08);
+}
+
+/* ================== Submit Button ================== */
+.contact-submit-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: var(--plus-jakarta-sans);
     cursor: pointer;
-    width: 150px;
-    margin: 20px auto 0;
-    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(13, 91, 162, 0.3);
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(13, 91, 162, 0.4);
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ================== Status Messages ================== */
+.contact-status {
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.contact-status-success {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.contact-status-error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+    .contact-form-card {
+        padding: 28px 20px !important;
+    }
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Positivelok</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sections/header.css">
     <link rel="stylesheet" href="../css/sections/footer.css">
@@ -10,67 +11,194 @@
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "FWyaB2682lAZcOBLU",
-            });
-        })();
-    </script>
-    <script src="../Positivelok_Website/src/script.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () { emailjs.init({ publicKey: "FWyaB2682lAZcOBLU" }); })();
+    </script>
 </head>
 
 <body>
-    
-<!--Navbar starts-->
-      <div id="navbar"></div> 
-        <script>
-            fetch('/html/navbar.html')
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load navbar.');
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('navbar').innerHTML = html;
-                })
-                .catch(error => console.error(error));
-        </script>
-<!-- Navbar ends -->
 
+<!-- Navbar -->
+<div id="navbar"></div>
+<script>
+    fetch('/html/navbar.html')
+        .then(r => { if (!r.ok) throw new Error('Failed'); return r.text(); })
+        .then(html => { document.getElementById('navbar').innerHTML = html; })
+        .catch(e => console.error(e));
+</script>
 
-<div class="wrapper">
-    <form onsubmit="sendMail(); return false;">
-        <h3>GET IN TOUCH</h3>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Email id" required>
-        <input type="text" id="phone" placeholder="Phone no." required>
-        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-        <button>Send</button>
-    </form>
-</div>
+<!-- Hero Banner -->
+<section class="contact-hero">
+    <div class="container h-100 d-flex align-items-center">
+        <div data-aos="fade-up">
+            <p class="text-uppercase tracking-wider mb-2" style="color: var(--secondary-color); font-weight: 700;">Reach Out</p>
+            <h1 class="display-4 fw-bold text-white mb-3">Contact Us</h1>
+            <p class="text-light opacity-75 fs-5">We'd love to hear from you. Let's talk about your requirements.</p>
+            <nav aria-label="breadcrumb" class="mt-3">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="/index.html" class="text-light opacity-75 text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Contact Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
 
+<main class="py-5">
+    <div class="container py-4">
+        <div class="row g-5 align-items-start">
 
+            <!-- Left: Info Cards -->
+            <div class="col-lg-5" data-aos="fade-right">
+                <p class="text-uppercase tracking-wider fw-bold mb-2" style="color: var(--secondary-color);">Get in Touch</p>
+                <h2 class="display-6 fw-bold text-dark mb-2">We're Here to Help</h2>
+                <p class="text-muted mb-5">Our team of engineering experts is ready to answer your questions and provide personalized solutions for your machining needs.</p>
 
+                <div class="contact-info-card mb-4">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Phone</h6>
+                        <p class="text-muted mb-0">+91 9969884470</p>
+                        <p class="text-muted mb-0">+91 9867599055</p>
+                    </div>
+                </div>
 
-<!--Footer starts-->
+                <div class="contact-info-card mb-4">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Email</h6>
+                        <p class="text-muted mb-0">sales@positivelok.com</p>
+                        <p class="text-muted mb-0">positivelok@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card mb-4">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Mumbai (Sales)</h6>
+                        <p class="text-muted mb-0">C/2, Laghu Udyog Kendra, IB Patel Rd,<br>Goregaon, Mumbai – 400063</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Rajkot (Head Office)</h6>
+                        <p class="text-muted mb-0">Sr No.163/1-P, S.I.D.C. Road,<br>Veraval (Shapar), Rajkot – 360024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+                <div class="contact-form-card rounded-4 p-5 shadow-sm">
+                    <h4 class="fw-bold mb-1 text-dark">Send Us a Message</h4>
+                    <p class="text-muted mb-4">Fill in the form below and we'll get back to you within 24 hours.</p>
+
+                    <form onsubmit="sendMail(); return false;" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small text-dark">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" id="name" class="contact-input" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small text-dark">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" id="email" class="contact-input" placeholder="rahul@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small text-dark">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" id="phone" class="contact-input" placeholder="+91 98765 43210" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small text-dark">Subject</label>
+                                <input type="text" id="subject" class="contact-input" placeholder="Product Inquiry">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold small text-dark">Message</label>
+                                <textarea id="message" class="contact-input" rows="5" placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="contact-submit-btn w-100" id="submitBtn">
+                                    <span id="btnText"><i class="fas fa-paper-plane me-2"></i>Send Message</span>
+                                    <span id="btnLoading" style="display:none;"><i class="fas fa-spinner fa-spin me-2"></i>Sending...</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <div id="formStatus" class="contact-status" style="display:none;"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
 <footer class="footer" id="footer-container">
-      <div id="footer"></div> 
-        <script>
-            fetch('/html/footer.html')
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load footer.');
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('footer-container').innerHTML = html;
-                })
-                .catch(error => console.error(error));
-        </script>
+    <div id="footer"></div>
+    <script>
+        fetch('/html/footer.html')
+            .then(r => { if (!r.ok) throw new Error('Failed'); return r.text(); })
+            .then(html => { document.getElementById('footer-container').innerHTML = html; })
+            .catch(e => console.error(e));
+    </script>
 </footer>
-<!-- Footer ends -->
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 40 });
+
+    function sendMail() {
+        const btn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnLoading = document.getElementById('btnLoading');
+        const statusEl = document.getElementById('formStatus');
+
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        btn.disabled = true;
+
+        const params = {
+            name:    document.getElementById('name').value,
+            email:   document.getElementById('email').value,
+            phone:   document.getElementById('phone').value,
+            subject: document.getElementById('subject').value || 'General Inquiry',
+            message: document.getElementById('message').value,
+        };
+
+        emailjs.send('service_id', 'template_id', params)
+            .then(() => {
+                statusEl.style.display = 'block';
+                statusEl.className = 'contact-status contact-status-success';
+                statusEl.innerHTML = '<i class="fas fa-check-circle me-2"></i>Your message has been sent! We\'ll get back to you soon.';
+                document.getElementById('contactForm').reset();
+            })
+            .catch(() => {
+                statusEl.style.display = 'block';
+                statusEl.className = 'contact-status contact-status-error';
+                statusEl.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Something went wrong. Please email us directly at sales@positivelok.com.';
+            })
+            .finally(() => {
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                btn.disabled = false;
+            });
+    }
+</script>
 </body>
 </html>
