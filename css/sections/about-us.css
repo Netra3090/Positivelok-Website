@@ -1,219 +1,169 @@
-
-.about-us-body{
-    height: 100%;
-    background-color: var(--primary-color);
-}
-
-.wrapper-halfbody{
-    background-repeat: no-repeat;
-    background-size:cover ;
-    padding: 0 8% 5% 8%;
-}
-
-.location-heading{
-    margin-bottom: 3%;
-    color: black;
-    margin-left: 1%;
+/* ================== About Hero ================== */
+.about-hero {
+    background-image:
+        linear-gradient(to right, rgba(9, 64, 114, 0.95) 0%, rgba(9, 64, 114, 0.75) 60%, rgba(9, 64, 114, 0.35) 100%),
+        url('../assets/about-us/about-us-background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
     display: flex;
-    gap: 2%;
     align-items: center;
-    text-transform: uppercase;
 }
 
-.location-heading i {
-    font-size: 30px;
+/* ================== Our Story Image ================== */
+.about-img-wrap {
+    padding-bottom: 20px;
+    padding-right: 20px;
 }
 
-
-.page-heading{
-    position: relative;
-    padding: 20px 40px;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 60px;
-    margin-bottom: 5%;
-    text-transform: uppercase;
-}
-
-.wrapper h1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 0;
-    height: 1.5px;
-    width: 120px;
-    background-color:#aaa7a7;
-}
-
-
-.container p{
-    padding: 30px 40px;
-    font-family: var(--plus-jakarta-sans);
-    font-weight: 600;
-    line-height: 1.5rem;
-}
-
-.container{
-    background-color: rgb(255, 255, 255, 0.8);
-    border-radius: 10px;
-    /* background-color: black; */
-    /* color: white; */
-}
-
-
-.about-us-details{
-    background-color: white;
+.about-img-accent {
     width: 100%;
-    padding: 40px 60px;
-}
-
-.divider {
-    padding: 2%;
-}
-
-.column {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.label {
-    width: 100px;
-    font-weight: bold;
-}
-
-.value{
-    flex: 1;
-    font-size: 18px;
-    margin-top: 10%;
-    line-height: 130%;
-}
-
-.contact-number {
-    padding-top: 2%;
-    width: 100%;
-}
-
-.contact-number li{
-    list-style: none;
-    padding: 3%;
-    width: 100%;
-}
-
-.contact-number i {
-    padding-right: 5%;
-    padding-top: 4%;
-}
-
-
-.email {
-  display: flex;
-  align-items: flex-start;
-  gap: 5%;
-  padding-top: 4%;
-}
-
-.email-icon {
-  height: 100%;
-  padding-top: 2%;
-}
-
-.email-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 0.9;
-}
-
-#au{
-   color: black;
-}
-
-.company-info{
-    position: relative;
-}
-
-.company-info p{
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-}
-
-.company-info p::after{
-    content: "";
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1.5px;
-    width: 80px;
+    height: 100%;
     background-color: var(--secondary-color);
+    opacity: 0.12;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
 }
 
-.company-info h1 {
-    margin-bottom: 2%;
-    font-size: 24px;
-}
-
-.wrapper-company {
+.about-badge {
+    bottom: 10px;
+    left: -10px;
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
+    color: #fff;
+    padding: 16px 22px;
+    border-radius: 16px;
     display: flex;
-    justify-content: space-between;
-    border: 0.5px solid black;
-    padding: 2%;
-    border-radius: 20px;
-    border-color:#aaa7a7 ;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(9, 64, 114, 0.4);
+    z-index: 2;
 }
 
-.maps {
-    border: 1px solid black;
-    border-radius: 10px;
-    max-width: fit-content;
+.about-badge-num {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
-.maps iframe {
-    border-radius: 10px;
+.about-badge-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    line-height: 1.4;
 }
 
-@media screen and (max-width:768px){
+/* ================== Stats ================== */
+.about-stats-section {
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-color) 100%);
+}
 
-    .wrapper-halfbody{
-        background-size: cover;
-    }
+.about-stat-card {
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
+}
 
-    .about-us-details{
-        padding: 20px 30px;
-    }
+.about-stat-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-5px);
+}
 
-   .container p{
-    padding: 15px 20px;
-   }
+.about-stat-icon {
+    font-size: 1.8rem;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
 
-    .wrapper-company{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 5% 10%;
-    }
+/* ================== Core Values ================== */
+.value-card {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
 
-    .location-heading {
-        font-size: 12px;
-        padding-bottom: 3%;
-    }
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
 
-    .value{
-        margin-top: 5%;
-        font-size: 15px;
-    }
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+}
 
-    .maps iframe{
-        max-width: 280px;
-        max-height: 200px;
-    }
+/* ================== Locations ================== */
+.location-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    transition: all 0.3s ease;
+}
 
-    .maps {
-        max-width: fit-content;
-    }
+.location-badge {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.location-badge-sales {
+    background-color: #0d6efd;
+}
+
+.location-detail-icon {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    margin-top: 2px;
+}
+
+.map-wrap {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.map-wrap iframe {
+    display: block;
+}
+
+/* ================== CTA Banner ================== */
+.about-cta {
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-color) 100%);
+}
+
+.about-cta-outline {
+    display: inline-block;
+    padding: 15px 35px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.about-cta-outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    color: #fff;
 }
