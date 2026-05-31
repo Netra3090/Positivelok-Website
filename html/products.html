@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/sections/header.css">
     <link rel="stylesheet" href="../css/sections/footer.css">
     <link rel="stylesheet" href="../css/sections/products.css">
+    <link rel="stylesheet" href="../css/P/products.css">
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -51,23 +52,22 @@
     <div class="container py-4">
 
         <!-- Section: Power Chucks -->
-        <div class="mb-5" data-aos="fade-up">
+        <div id="list-of-products" class="mb-5" data-aos="fade-up">
             <div class="products-section-header mb-4">
-                <h2 class="products-section-title">Power Chucks</h2>
+                <h2 class="products-section-title">List of Products</h2>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="prod-card">
                         <div class="prod-img-wrap">
                             <img src="../assets/products/Power-Chuck.jpg" alt="Power Chuck" class="img-fluid">
                             <div class="prod-overlay">
-                                <a href="Products/stationarychuck.html" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                                <a href="P/PowerChuck.html" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
                             </div>
                         </div>
                         <div class="prod-info">
                             <h4 class="prod-name">Power Chuck</h4>
                             <p class="prod-desc">High-precision hydraulic power chucks for automated CNC machining.</p>
-                            <a href="Products/stationarychuck.html" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
@@ -80,9 +80,8 @@
                             </div>
                         </div>
                         <div class="prod-info">
-                            <h4 class="prod-name">SP Power Chuck</h4>
+                            <h4 class="prod-name">Collet Chuck</h4>
                             <p class="prod-desc">Special purpose chucks designed for custom and complex machining jobs.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
@@ -95,12 +94,14 @@
                             </div>
                         </div>
                         <div class="prod-info">
-                            <h4 class="prod-name">Collet Chuck</h4>
+                            <h4 class="prod-name">Stationary Chuck</h4>
                             <p class="prod-desc">Precision collet chucks ensuring superior concentricity and clamping force.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="row g-4 justify-content-center mt-3">
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="prod-card">
                         <div class="prod-img-wrap">
@@ -110,9 +111,22 @@
                             </div>
                         </div>
                         <div class="prod-info">
-                            <h4 class="prod-name">Rotary Cylinders</h4>
+                            <h4 class="prod-name">Rotary Cylinder</h4>
                             <p class="prod-desc">High-performance rotary cylinders for seamless hydraulic power transmission.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="prod-card">
+                        <div class="prod-img-wrap">
+                            <img src="../assets/products/Rotary-Cylinders.jpg" alt="Stationary Cylinders" class="img-fluid" style="aspect-ratio:1/1; object-fit:cover;">
+                            <div class="prod-overlay">
+                                <a href="#" class="prod-overlay-btn">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="prod-info">
+                            <h4 class="prod-name">Vices</h4>
+                            <p class="prod-desc">Fixed hydraulic cylinders for stationary clamping applications.</p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +153,6 @@
                         <div class="prod-info">
                             <h4 class="prod-name">Soft Jaws</h4>
                             <p class="prod-desc">Custom soft jaws for gentle and accurate workpiece gripping.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +167,6 @@
                         <div class="prod-info">
                             <h4 class="prod-name">Hard Jaws</h4>
                             <p class="prod-desc">Heavy duty hard jaws engineered for maximum grip and longevity.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
@@ -169,7 +181,6 @@
                         <div class="prod-info">
                             <h4 class="prod-name">Backplates</h4>
                             <p class="prod-desc">Precision backplates for accurate and secure chuck mounting.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
@@ -182,12 +193,12 @@
                             </div>
                         </div>
                         <div class="prod-info">
-                            <h4 class="prod-name">Stationary Cylinders</h4>
+                            <h4 class="prod-name">T-nut</h4>
                             <p class="prod-desc">Fixed hydraulic cylinders for stationary clamping applications.</p>
-                            <a href="#" class="prod-link text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
 

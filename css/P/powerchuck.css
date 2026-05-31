@@ -1,0 +1,29 @@
+/* Page-only product card sizing for PowerChuck.html */
+body.page-powerchuck .prod-card {
+    max-width: 320px;
+    margin: 0 auto;
+}
+body.page-powerchuck .prod-img-wrap {
+    padding: 14px;
+}
+body.page-powerchuck .prod-img-wrap img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+body.page-powerchuck .prod-info {
+    padding: 16px 16px 20px;
+}
+body.page-powerchuck .prod-name {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+body.page-powerchuck .prod-desc {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+body.page-powerchuck .prod-overlay-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+}

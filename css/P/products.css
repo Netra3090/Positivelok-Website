@@ -1,0 +1,10 @@
+/* Page-only tweaks: do not override Bootstrap column sizing.
+   Use Bootstrap classes to arrange 3 items on the first row and
+   2 centered on the second. */
+
+/* Ensure any rows intentionally using `justify-content-center` center their content */
+#list-of-products .row.justify-content-center {
+  justify-content: center;
+}
+
+
