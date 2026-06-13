@@ -47,6 +47,27 @@
     padding-bottom: 1.5rem;
 }
 
+/* Sub-table caption (e.g. Soft Jaw variants, dimension tables) */
+.table-caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--secondary-dark);
+    margin: 24px 0 8px;
+}
+
+/* Placeholder cell shown when no spec/dimension data is available yet */
+.table-placeholder {
+    text-align: center !important;
+    color: #6b7280;
+    font-style: italic;
+    padding: 28px 16px !important;
+    background: #f9fafb;
+}
+.table-placeholder a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
 /* ================== Responsive ================== */
 @media (max-width: 768px) {
     .sproduct {
