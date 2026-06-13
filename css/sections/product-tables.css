@@ -1,0 +1,83 @@
+/* Shared product table styles for Specifications, Dimensions, Downloads */
+
+.spec-table,
+.container-specs-and-dimension table,
+.specifications table,
+.dimensions table,
+.downloads table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    table-layout: auto;
+    font-size: 0.95rem;
+}
+
+th, td {
+    border: 1px solid #d0d6db;
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.spec-table th,
+.container-specs-and-dimension th {
+    background: #0f1720;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 8px;
+    white-space: normal;
+    line-height: 1.1;
+    font-size: 0.9rem;
+}
+
+.spec-table td:first-child,
+.dimensions table td:first-child,
+.specifications table td:first-child {
+    text-align: left;
+    padding-left: 12px;
+}
+
+.spec-table th:first-child {
+    text-align: left;
+}
+
+.spec-table tbody tr:nth-child(even),
+.dimensions table tbody tr:nth-child(even),
+.specifications table tbody tr:nth-child(even) {
+    background: #f7f9fb;
+}
+
+@media (max-width: 768px) {
+    .spec-table,
+    .container-specs-and-dimension table,
+    .specifications table,
+    .dimensions table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 6px 8px;
+    }
+}
+
+.container-specs-and-dimension > div,
+.specifications,
+.dimensions,
+.downloads {
+    overflow-x: auto;
+}
+
+.downloads img, .downloads button {
+    width: 36px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .spec-table,
+    .dimensions table {
+        font-size: 0.92rem;
+    }
+}

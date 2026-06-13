@@ -66,22 +66,36 @@ button:hover {
     padding: 80px 60px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
-}
+/* Product table styles are centralized in sections/product-tables.css */
+/* This file contains product-specific page layout and visuals. */
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px 12px;
-    text-align: left;
-}
+/* No desktop-only sticky header behavior */
+
+/* Sticky headers intentionally disabled for better mobile/tablet compatibility */
 
 th {
     background-color: #f4f4f4;
     font-weight: bold;
+}
+
+.container-specs-and-dimension > div {
+    overflow-x: auto;
+}
+
+@media (max-width: 992px) {
+    .container-specs-and-dimension {
+        padding: 40px 20px;
+    }
+
+    .container-specs-and-dimension table {
+        min-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-specs-and-dimension table {
+        font-size: 0.92rem;
+    }
 }
 
 .downloads img, .downloads button {
