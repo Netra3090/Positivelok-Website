@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Jaws | Positivelok</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sections/footer.css">
+    <link rel="stylesheet" href="/css/sections/products.css">
+    <link rel="stylesheet" href="/css/products/colletchuck.css">
+    <link rel="stylesheet" href="/css/products/stationarychuck.css">
+    <link rel="stylesheet" href="/css/P/powerchucks-css/oc-2j.css">
+    <link rel="icon" type="image/png" href="/assets/Icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch('/html/navbar.html')
+            .then(r => { if (!r.ok) throw new Error('Failed to load navbar.'); return r.text(); })
+            .then(html => { document.getElementById('navbar').innerHTML = html; })
+            .catch(e => console.error(e));
+    </script>
+
+    <!-- Page Hero Banner -->
+    <section class="products-hero">
+        <div class="container h-100 d-flex align-items-center">
+            <div data-aos="fade-up">
+                <p class="text-uppercase tracking-wider mb-2" style="color: var(--secondary-color); font-weight: 700;">Positivelok</p>
+                <h1 class="display-4 fw-bold text-white mb-3">Soft Jaws</h1>
+                <nav aria-label="breadcrumb" class="mt-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/index.html" class="text-light opacity-75 text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/html/products.html" class="text-light opacity-75 text-decoration-none">Products</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Soft Jaws</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product overview -->
+    <section class="container sproduct my-5 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pb-1" src="/assets/products/Power-Chuck.jpg" id="MainImg" alt="Soft Jaws">
+                <div class="small-img-group">
+                    <div class="small-img-col"><img src="/assets/products/Power-Chuck.jpg" width="100%" class="small-img" alt=""></div>
+                    <div class="small-img-col"><img src="/assets/products/Collet-Chucks.jpeg" width="100%" class="small-img" alt=""></div>
+                    <div class="small-img-col"><img src="/assets/products/SJ.jpeg" width="100%" class="small-img" alt=""></div>
+                    <div class="small-img-col"><img src="/assets/products/Rotary-Cylinders.jpg" width="100%" class="small-img" alt=""></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>Products / Soft Jaws</h6>
+                <h3 class="py-4">Soft Jaws</h3>
+                <h2>SJ Series</h2>
+                <div class="product-actions">
+                    <a href="/html/contact-us.html" class="btn btn-primary">Create enquiry <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="/html/e-catalog.html" class="btn btn-secondary">Download catalogue <i class="fas fa-download ms-2"></i></a>
+                </div>
+                <h4 class="mt-5 mb-4">Product Details</h4>
+                <span class="product-details-text">Custom and standard soft jaws, machined to suit your workpiece for gentle and accurate gripping.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications & Dimensions -->
+    <section>
+        <div class="specs-and-dimension">
+            <div class="container-specs-and-dimension">
+                <div class="specifications"><h2>Specifications</h2><h3 class="table-caption">Standard - Metric Soft Jaws</h3><table class="spec-table"><thead><tr><th>Sr No.</th><th>Part Code</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th><th>S9</th><th>S10</th><th>S11</th><th>S12</th><th colspan="2">Serration</th></tr></thead><tbody><tr><td>1</td><td>SJ/135</td><td>65</td><td>25</td><td>32</td><td>10</td><td>14</td><td>3</td><td>14</td><td>7</td><td>15</td><td>9</td><td>29</td><td>M8</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>2</td><td>SJ/170</td><td>80</td><td>30</td><td>40</td><td>12</td><td>20</td><td>6</td><td>15</td><td>7</td><td>17</td><td>11</td><td>27</td><td>M10</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>3</td><td>SJ/210</td><td>100</td><td>40</td><td>40</td><td>14</td><td>25</td><td>8</td><td>19</td><td>7</td><td>19</td><td>13</td><td>27</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>4</td><td>SJ/254</td><td>120</td><td>50</td><td>40</td><td>16</td><td>30</td><td>8</td><td>25</td><td>7</td><td>19</td><td>13</td><td>36</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>5</td><td>SJ/304</td><td>150</td><td>50</td><td>50</td><td>18</td><td>30</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>6</td><td>SJ/304A</td><td>150</td><td>50</td><td>50</td><td>21</td><td>30</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr></tbody></table><h3 class="table-caption">Standard - Inch Soft Jaws</h3><table class="spec-table"><thead><tr><th>Sr No.</th><th>Part Code</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th><th>S9</th><th>S10</th><th>S11</th><th>S12</th><th colspan="2">Serration</th></tr></thead><tbody><tr><td>1</td><td>SJ/135</td><td>65</td><td>25</td><td>32</td><td>10</td><td>14</td><td>3</td><td>14</td><td>7</td><td>15</td><td>9</td><td>29</td><td>M8</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>2</td><td>SJ/165</td><td>80</td><td>30</td><td>40</td><td>12</td><td>19</td><td>6</td><td>15</td><td>7</td><td>17</td><td>11</td><td>27</td><td>M10</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>3</td><td>SJ/200</td><td>100</td><td>40</td><td>40</td><td>17</td><td>19</td><td>8</td><td>19</td><td>7</td><td>19</td><td>13</td><td>27</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>4</td><td>SJ/250</td><td>120</td><td>50</td><td>40</td><td>21</td><td>25</td><td>8</td><td>25</td><td>7</td><td>19</td><td>13</td><td>36</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>5</td><td>SJ/300</td><td>150</td><td>50</td><td>50</td><td>18</td><td>25</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>6</td><td>SJ/300A</td><td>150</td><td>50</td><td>50</td><td>21</td><td>25</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr></tbody></table><h3 class="table-caption">Special - Metric Soft Jaws</h3><table class="spec-table"><thead><tr><th>Sr No.</th><th>Part Code</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th><th>S9</th><th>S10</th><th>S11</th><th>S12</th><th colspan="2">Serration</th></tr></thead><tbody><tr><td>1</td><td>SJ/135</td><td>65</td><td>25</td><td>40</td><td>10</td><td>14</td><td>3</td><td>14</td><td>7</td><td>15</td><td>9</td><td>29</td><td>M8</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>2</td><td>SJ/170</td><td>80</td><td>30</td><td>50/63/75/100</td><td>12</td><td>20</td><td>6</td><td>15</td><td>7</td><td>17</td><td>11</td><td>27</td><td>M10</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>3</td><td>SJ/210</td><td>100</td><td>40</td><td>40/63/75/100</td><td>14</td><td>25</td><td>8</td><td>19</td><td>7</td><td>19</td><td>13</td><td>27</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>4</td><td>SJ/254</td><td>120</td><td>50</td><td>40/63/75/100</td><td>16</td><td>30</td><td>8</td><td>25</td><td>7</td><td>19</td><td>13</td><td>36</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>5</td><td>SJ/304</td><td>150</td><td>50</td><td>50/63/75/100</td><td>18</td><td>30</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>6</td><td>SJ/304A</td><td>150</td><td>50</td><td>50/63/75/100</td><td>21</td><td>30</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr></tbody></table><h3 class="table-caption">Special - Inch Soft Jaws</h3><table class="spec-table"><thead><tr><th>Sr No.</th><th>Part Code</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th><th>S9</th><th>S10</th><th>S11</th><th>S12</th><th colspan="2">Serration</th></tr></thead><tbody><tr><td>1</td><td>SJ/135</td><td>65</td><td>25</td><td>40</td><td>10</td><td>14</td><td>3</td><td>14</td><td>7</td><td>15</td><td>9</td><td>29</td><td>M8</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>2</td><td>SJ/165</td><td>80</td><td>30</td><td>40/63/75/100</td><td>12</td><td>19</td><td>6</td><td>15</td><td>7</td><td>17</td><td>11</td><td>27</td><td>M10</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>3</td><td>SJ/200</td><td>100</td><td>40</td><td>40/63/75/100</td><td>17</td><td>19</td><td>8</td><td>19</td><td>7</td><td>19</td><td>13</td><td>27</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>4</td><td>SJ/250</td><td>120</td><td>50</td><td>40/63/75/100</td><td>21</td><td>25</td><td>8</td><td>25</td><td>7</td><td>19</td><td>13</td><td>36</td><td>M12</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>5</td><td>SJ/300</td><td>150</td><td>50</td><td>50/63/75/100</td><td>18</td><td>25</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr><tr><td>6</td><td>SJ/300A</td><td>150</td><td>50</td><td>50/63/75/100</td><td>21</td><td>25</td><td>9</td><td>29.5</td><td>8</td><td>25</td><td>17</td><td>34</td><td>M16</td><td>1.5 x 60</td><td>1/16 x 90</td></tr></tbody></table></div><div class="dimensions"><h2>Dimensions</h2><table><tbody><tr><td class="table-placeholder">Dimensional drawings and data will be updated soon.</td></tr></tbody></table></div>
+                <div class="downloads">
+                    <h2>Downloads</h2>
+                    <table>
+                        <thead>
+                            <th>Model</th><th>2D PDF</th><th>2D DWG</th><th>3D STEP</th>
+                        </thead>
+                        <tbody>
+                            <tr><td>SJ Series</td><td><button><img src="/assets/icons/pdf download.png" alt="PDF"></button></td><td><button><img src="/assets/icons/dwg download.png" alt="DWG"></button></td><td><button><img src="/assets/icons/step download.png" alt="STEP"></button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer-container">
+        <div id="footer"></div>
+        <script>
+            fetch('/html/footer.html')
+                .then(r => { if (!r.ok) throw new Error('Failed to load footer.'); return r.text(); })
+                .then(html => { document.getElementById('footer-container').innerHTML = html; })
+                .catch(e => console.error(e));
+        </script>
+    </footer>
+
+    <script>
+        var MainImg = document.getElementById('MainImg');
+        var smallimg = document.getElementsByClassName('small-img');
+        for (var i = 0; i < smallimg.length; i++) {
+            smallimg[i].addEventListener('click', function () { MainImg.src = this.src; });
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 40 });</script>
+</body>
+</html>
