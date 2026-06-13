@@ -141,33 +141,73 @@
     AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 40 });
 
     $(function () {
-        const flipWidth = Math.min(900, window.innerWidth - 60);
-        const flipHeight = flipWidth * 0.7083;
+        const $flipbook = $('#flipbook');
+        // Capture the original page markup BEFORE turn.js injects internal wrappers
+        const originalHtml = $flipbook.html();
+        const totalPages = $flipbook.children('div').length;
+        let currentMode = null;
 
-        // Count pages BEFORE turn.js injects internal wrappers
-        const totalPages = $('#flipbook').children('div').length;
+        function buildFlipbook() {
+            // Single page on phones/tablets so each page is large enough to read,
+            // double-page spread on wider screens.
+            const isMobile = window.innerWidth < 768;
+            const mode = isMobile ? 'single' : 'double';
 
-        $('#flipbook').turn({
-            width: flipWidth,
-            height: flipHeight,
-            display: 'double',
-            acceleration: true,
-            gradients: true,
-            duration: 1000,
-            elevation: 50,
-        });
-
-        // Update counter on turn
-        $('#flipbook').bind('turned', function(event, page) {
-            $('#pageIndicator').text('Page ' + page + ' of ' + totalPages);
-        });
-
-        $('#flipbook').bind('turning', function(event, page) {
-            if (page === 1) {
-                $('.flipbook div:first-child').css('z-index', 10);
+            let width, height;
+            if (isMobile) {
+                width = Math.min(440, window.innerWidth - 40);
+                height = width * 1.4166; // single page aspect ratio
             } else {
-                $('.flipbook div:first-child').css('z-index', '');
+                width = Math.min(900, window.innerWidth - 60);
+                height = width * 0.7083; // double-page spread aspect ratio
             }
+
+            // Same mode already active → just resize in place
+            if (currentMode === mode) {
+                $flipbook.turn('size', width, height);
+                return;
+            }
+
+            // Rebuild from clean markup when switching layout modes
+            if (currentMode !== null) {
+                try { $flipbook.turn('destroy'); } catch (e) {}
+                $flipbook.html(originalHtml);
+            }
+
+            $flipbook.turn({
+                width: width,
+                height: height,
+                display: mode,
+                acceleration: true,
+                gradients: true,
+                duration: 1000,
+                elevation: 50,
+            });
+
+            // Update counter on turn
+            $flipbook.bind('turned', function (event, page) {
+                $('#pageIndicator').text('Page ' + page + ' of ' + totalPages);
+            });
+
+            $flipbook.bind('turning', function (event, page) {
+                if (page === 1) {
+                    $('.flipbook div:first-child').css('z-index', 10);
+                } else {
+                    $('.flipbook div:first-child').css('z-index', '');
+                }
+            });
+
+            currentMode = mode;
+            $('#pageIndicator').text('Page 1 of ' + totalPages);
+        }
+
+        buildFlipbook();
+
+        // Rebuild/resize on viewport changes (debounced)
+        let resizeTimer;
+        $(window).on('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(buildFlipbook, 250);
         });
     });
 </script>
