@@ -12,6 +12,7 @@
     --brochure-button-color: #DED9D9;
     --dark-bg: #111827;
     --light-bg: #f9fafb;
+    --nav-height: 91px;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
   font-family: var(--plus-jakarta-sans);
   color: #1f2937;
   overflow-x: hidden;
-  padding-top: 86px;
+  padding-top: var(--nav-height);
   background-color: var(--light-bg);
 }
 
@@ -36,7 +37,8 @@ body {
 #home {
   background-image: linear-gradient(to right, rgba(17, 24, 39, 0) 0%, rgba(17, 24, 39, 0.2) 40%, rgba(17, 24, 39, 0.85) 70%, rgba(17, 24, 39, 0.95) 100%), url("../assets/Background-index.png");
   width: 100%;
-  height: calc(100vh - 86px);
+  height: calc(100vh - var(--nav-height));
+  min-height: 520px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -230,18 +232,120 @@ body {
 }
 
 /* ================== Responsive ================== */
+
+/* Keep the fixed navbar brand from forcing an oversized bar */
+.navbar-brand img {
+  max-height: var(--nav-height);
+  width: auto;
+}
+
+/* Tablets & small laptops */
+@media screen and (max-width: 991.98px) {
+  .display-3 { font-size: 3rem; }
+  .display-4 { font-size: 2.75rem; }
+  .display-5 { font-size: 2.25rem; }
+  .display-6 { font-size: 1.9rem; }
+  /* Keep category/accessory icons from looking oversized on tablets */
+  #hero .product-img-box img,
+  #other-accessories .product-img-box img {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Tablets / large phones */
 @media screen and (max-width: 768px) {
+  :root {
+    --nav-height: 78px;
+  }
+  .navbar-brand img {
+    height: 58px;
+  }
+  /* Center the hero block instead of pinning it right (which clipped text) */
+  .home-container {
+    justify-content: center !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .home-content {
-    text-align: center;
+    text-align: center !important;
+    max-width: 100%;
+    width: 100%;
   }
-  .display-3 {
-    font-size: 2.5rem;
+  .home-content h1,
+  .home-content h5,
+  .home-content p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
+  .home-content h1 br {
+    display: none;
+  }
+  .display-3 { font-size: 2.5rem; }
+  .display-4 { font-size: 2.25rem; }
+  .display-5 { font-size: 2rem; }
+  .display-6 { font-size: 1.7rem; }
+  .fs-5 { font-size: 1.05rem !important; }
   #home {
     background-attachment: scroll;
+    /* The wide banner image (1159x530) over-crops on a tall portrait hero,
+       so shorten it on phones for a better fit. */
+    height: 72vh;
+    min-height: 440px;
+    background-position: center;
   }
   #banner {
     background-attachment: scroll;
+  }
+  /* Decorative offset shapes overflow the right edge and get clipped,
+     making the images look cut — hide them on small screens. */
+  .intro-shape {
+    display: none;
+  }
+  /* Square product/category images (250x250) upscale and look oversized
+     on full-width cards — cap and center them. */
+  #hero .product-img-box img,
+  #other-accessories .product-img-box img {
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Reduce heavy section vertical padding on small screens */
+  .py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .navbar-brand img {
+    height: 50px;
+  }
+  .display-3 { font-size: 2.1rem; }
+  .display-4 { font-size: 1.9rem; }
+  .display-5 { font-size: 1.7rem; }
+  .display-6 { font-size: 1.5rem; }
+  #home {
+    height: 78vh;
+    min-height: 400px;
+  }
+  #hero .product-img-box img,
+  #other-accessories .product-img-box img {
+    max-width: 150px;
+  }
+  .acc-button {
+    padding: 12px 26px;
+    font-size: 15px;
+  }
+  /* Stacked CTA buttons shouldn't sit shoulder-to-shoulder */
+  .products-cta-banner .acc-button,
+  .products-cta-banner .prod-cta-outline {
+    display: block;
+    width: 100%;
+    margin: 0 0 12px 0 !important;
+    text-align: center;
   }
 }
 
