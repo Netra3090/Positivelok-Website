@@ -1,0 +1,74 @@
+.product-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 0;
+}
+.product-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 0.95rem 1.6rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+.product-actions .btn-primary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+.product-actions .btn-secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.product-actions .btn-secondary:hover,
+.product-actions .btn-primary:hover {
+    background: var(--secondary-dark);
+    color: #fff;
+    border-color: var(--secondary-dark);
+}
+.product-details-text {
+    display: block;
+    color: #4b5563;
+    margin-top: 1rem;
+    line-height: 1.8;
+    font-size: 1rem;
+    max-width: 700px;
+}
+
+/* Page-only hero height override for oc-2j.html */
+.products-hero {
+    min-height: 140px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+    .sproduct {
+        margin-top: 1.5rem !important;
+        padding-top: 1.5rem !important;
+    }
+    .sproduct h3 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    .related-products {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-actions {
+        flex-direction: column;
+    }
+    .product-actions .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
