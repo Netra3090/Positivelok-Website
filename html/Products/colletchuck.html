@@ -71,7 +71,7 @@
                 <div class="specifications"><h2>Specifications</h2><table class="spec-table"><thead><tr><th>Plunger Stroke  mm </th><th>Maximum Chuck Capacity mm Round</th><th>Maximum Chuck Capacity mm Hexagon</th><th>Maximum Chuck Capacity mm Square</th><th>Max. D.B. Pull Kn kgf</th><th>Max. Clamping Force Kn kgf</th><th>Max. Speed min-1 rpm</th></tr></thead><tbody><tr><td>7</td><td>3 ~ 42</td><td>6 ~ 36</td><td>6 ~ 29</td><td>24.5<br>2500</td><td>52.0<br>5300</td><td>6000</td></tr></tbody></table></div><div class="dimensions"><h2>Dimensions</h2><table><tbody><tr><td class="table-placeholder">Dimensional drawings and data will be updated soon.</td></tr></tbody></table></div>
                 <div class="downloads">
                     <h2>Downloads</h2>
-                    <p class="downloads-note">Click a drawing to download the 2D drawing, or request it if not yet available.</p>
+                    <p class="downloads-note">Click a model to request its 2D drawing — our team will share it with you.</p>
                     <table>
                         <thead><th>Model</th><th>2D Drawing</th></thead>
                         <tbody>
@@ -101,20 +101,12 @@
             smallimg[i].addEventListener('click', function () { if (MainImg) MainImg.src = this.src; });
         }
 
-        async function openDrawing(el) {
-            var part = el.getAttribute('data-part');
-            var urls = ['/assets/2D-pdf/W-' + part + '_2D.pdf', '/assets/drawings/' + part + '.pdf', '/assets/drawings/' + part + '.png', '/assets/drawings/' + part + '.jpg'];
-            for (var k = 0; k < urls.length; k++) {
-                try {
-                    var r = await fetch(urls[k], { method: 'HEAD' });
-                    if (r.ok) { window.open(urls[k], '_blank'); return; }
-                } catch (e) {}
-            }
+        function openDrawing(el) {
             window.location.href = '/html/contact-us.html?msg=' + encodeURIComponent(el.getAttribute('data-msg'));
         }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>AOS.init({ duration: 450, easing: 'ease-out-cubic', once: true, offset: 40 });</script>
+    <script>AOS.init({ duration: 300, easing: 'ease-out-cubic', once: true, offset: 40 });</script>
 </body>
 </html>

@@ -58,12 +58,12 @@ body {
 /* Staggered hero entrance */
 .home-content > * {
   opacity: 0;
-  animation: fadeUp 0.5s ease-out forwards;
+  animation: fadeUp 0.4s ease-out forwards;
 }
-.home-content h5 { animation-delay: 0.05s; }
-.home-content h1 { animation-delay: 0.15s; }
-.home-content p  { animation-delay: 0.25s; }
-.home-content .acc-button { animation-delay: 0.35s; }
+.home-content h5 { animation-delay: 0.04s; }
+.home-content h1 { animation-delay: 0.1s; }
+.home-content p  { animation-delay: 0.16s; }
+.home-content .acc-button { animation-delay: 0.22s; }
 
 .home-content h5 {
   color: #ffffff;
@@ -330,9 +330,9 @@ body {
     /* Dedicated portrait artwork so the chuck stays in frame on phones
        (the wide desktop banner gets center-cropped to just dark space). */
     background-image:
-      linear-gradient(to bottom, rgba(17, 24, 39, 0.1) 0%, rgba(17, 24, 39, 0.45) 48%, rgba(17, 24, 39, 0.88) 100%),
+      linear-gradient(to bottom, rgba(17, 24, 39, 0.35) 0%, rgba(17, 24, 39, 0.5) 50%, rgba(17, 24, 39, 0.85) 100%),
       url("../assets/Background-index-mobile.png");
-    background-position: center top;
+    background-position: center center;
     background-size: cover;
     height: calc(100vh - var(--nav-height));
     min-height: 560px;
