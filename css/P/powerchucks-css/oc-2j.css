@@ -99,6 +99,25 @@
     margin: 24px 0 8px;
 }
 
+/* Per-model 2D drawing download buttons */
+.downloads-note {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 4px 0 8px;
+}
+.drawing-link {
+    display: inline-block;
+    line-height: 0;
+}
+.drawing-link img {
+    width: 34px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.drawing-link:hover img {
+    transform: scale(1.12);
+}
+
 /* Placeholder cell shown when no spec/dimension data is available yet */
 .table-placeholder {
     text-align: center !important;

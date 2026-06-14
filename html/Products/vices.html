@@ -71,12 +71,11 @@
                 <div class="specifications"><h2>Specifications</h2><table class="spec-table"><tbody><tr><td class="table-placeholder">Detailed specifications for this product will be updated soon. Please <a href="/html/contact-us.html">contact us</a> for data.</td></tr></tbody></table></div><div class="dimensions"><h2>Dimensions</h2><table><tbody><tr><td class="table-placeholder">Dimensional drawings and data will be updated soon.</td></tr></tbody></table></div>
                 <div class="downloads">
                     <h2>Downloads</h2>
+                    <p class="downloads-note">Click a drawing to download the 2D drawing, or request it if not yet available.</p>
                     <table>
-                        <thead>
-                            <th>Model</th><th>2D PDF</th><th>2D DWG</th><th>3D STEP</th>
-                        </thead>
+                        <thead><th>Model</th><th>2D Drawing</th></thead>
                         <tbody>
-                            <tr><td>Vices</td><td><button><img src="/assets/icons/pdf download.png" alt="PDF"></button></td><td><button><img src="/assets/icons/dwg download.png" alt="DWG"></button></td><td><button><img src="/assets/icons/step download.png" alt="STEP"></button></td></tr>
+                            <tr><td>Vices</td><td><a href="#" class="drawing-link" data-part="Vices" data-msg="I am interested to view the drawing for Vices." onclick="openDrawing(this);return false;" title="2D Drawing for Vices"><img src="/assets/icons/pdf download.png" alt="2D Drawing"></a></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -100,6 +99,18 @@
         var smallimg = document.getElementsByClassName('small-img');
         for (var i = 0; i < smallimg.length; i++) {
             smallimg[i].addEventListener('click', function () { if (MainImg) MainImg.src = this.src; });
+        }
+
+        async function openDrawing(el) {
+            var part = el.getAttribute('data-part');
+            var exts = ['pdf', 'png', 'jpg', 'jpeg', 'PDF'];
+            for (var k = 0; k < exts.length; k++) {
+                try {
+                    var r = await fetch('/assets/drawings/' + part + '.' + exts[k], { method: 'HEAD' });
+                    if (r.ok) { window.open('/assets/drawings/' + part + '.' + exts[k], '_blank'); return; }
+                } catch (e) {}
+            }
+            window.location.href = '/html/contact-us.html?msg=' + encodeURIComponent(el.getAttribute('data-msg'));
         }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

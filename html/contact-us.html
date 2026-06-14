@@ -157,6 +157,18 @@
 <script>
     AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 40 });
 
+    // Pre-fill the message when arriving from a "request drawing" link
+    (function () {
+        var msg = new URLSearchParams(window.location.search).get('msg');
+        if (msg) {
+            var m = document.getElementById('message');
+            if (m) {
+                m.value = msg;
+                setTimeout(function () { m.scrollIntoView({ behavior: 'smooth', block: 'center' }); m.focus(); }, 300);
+            }
+        }
+    })();
+
     // Web3Forms access key — generate a free one at https://web3forms.com using
     // sales@positivelok.com, then paste it here. Submissions are emailed to that inbox.
     const WEB3FORMS_ACCESS_KEY = '0b94ffe6-ab99-4777-b91f-0a8fddf2c47a';

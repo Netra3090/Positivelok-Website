@@ -72,12 +72,13 @@
                 <div class="specifications"><h2>Specifications</h2><table class="spec-table"><tbody><tr><td class="table-placeholder">Detailed specifications for this product will be updated soon. Please <a href="/html/contact-us.html">contact us</a> for data.</td></tr></tbody></table></div><div class="dimensions"><h2>Dimensions</h2><table><thead><tr><th rowspan="3">Part No..</th><th rowspan="2">Thru Hole</th><th>Jaw Stroke</th><th>Plunger</th><th colspan="2">Gripping Dia External</th><th>Max. Draw Bar</th><th>Max. Gripping</th><th rowspan="2">Max. Speed</th><th rowspan="2">Net weight with soft top jaws</th><th rowspan="2">Moment of Inertia</th><th>Max. Pressure</th></tr><tr><th>Diameter</th><th>Stroke</th><th colspan="2">mm</th><th>Pull Force</th><th>Force</th><th>Mpa</th></tr><tr><th>mm</th><th>mm</th><th>mm</th><th>Max.</th><th>Min.</th><th>Kn</th><th>kN</th><th>min -1</th><th>kg</th><th>kg.m3</th><th></th></tr></thead><tbody><tr><td>HTWL - 2210</td><td>46</td><td>13</td><td>22</td><td>254</td><td>33</td><td>41.1</td><td>49</td><td>3300</td><td>25</td><td>0.198</td><td>2.99</td></tr><tr><td>HTWL - 3210</td><td>46</td><td>13</td><td>22</td><td>254</td><td>33</td><td>41.1</td><td>49</td><td>3300</td><td>25.2</td><td>0.198</td><td>2.99</td></tr><tr><td>HTWL - 4210</td><td>46</td><td>13</td><td>22</td><td>254</td><td>33</td><td>41.1</td><td>49</td><td>3300</td><td>26</td><td>0.198</td><td>2.99</td></tr></tbody></table></div>
                 <div class="downloads">
                     <h2>Downloads</h2>
+                    <p class="downloads-note">Click a drawing to download the 2D drawing, or request it if not yet available.</p>
                     <table>
-                        <thead>
-                            <th>Model</th><th>2D PDF</th><th>2D DWG</th><th>3D STEP</th>
-                        </thead>
+                        <thead><th>Model</th><th>2D Drawing</th></thead>
                         <tbody>
-                            <tr><td>HTWL Series</td><td><button><img src="/assets/icons/pdf download.png" alt="PDF"></button></td><td><button><img src="/assets/icons/dwg download.png" alt="DWG"></button></td><td><button><img src="/assets/icons/step download.png" alt="STEP"></button></td></tr>
+                            <tr><td>HTWL-2210</td><td><a href="#" class="drawing-link" data-part="HTWL-2210" data-msg="I am interested to view the drawing for HTWL-2210-2 Jaw." onclick="openDrawing(this);return false;" title="2D Drawing for HTWL-2210"><img src="/assets/icons/pdf download.png" alt="2D Drawing"></a></td></tr>
+                            <tr><td>HTWL-3210</td><td><a href="#" class="drawing-link" data-part="HTWL-3210" data-msg="I am interested to view the drawing for HTWL-3210-3 Jaw." onclick="openDrawing(this);return false;" title="2D Drawing for HTWL-3210"><img src="/assets/icons/pdf download.png" alt="2D Drawing"></a></td></tr>
+                            <tr><td>HTWL-4210</td><td><a href="#" class="drawing-link" data-part="HTWL-4210" data-msg="I am interested to view the drawing for HTWL-4210-4 Jaw." onclick="openDrawing(this);return false;" title="2D Drawing for HTWL-4210"><img src="/assets/icons/pdf download.png" alt="2D Drawing"></a></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -101,6 +102,18 @@
         var smallimg = document.getElementsByClassName('small-img');
         for (var i = 0; i < smallimg.length; i++) {
             smallimg[i].addEventListener('click', function () { if (MainImg) MainImg.src = this.src; });
+        }
+
+        async function openDrawing(el) {
+            var part = el.getAttribute('data-part');
+            var exts = ['pdf', 'png', 'jpg', 'jpeg', 'PDF'];
+            for (var k = 0; k < exts.length; k++) {
+                try {
+                    var r = await fetch('/assets/drawings/' + part + '.' + exts[k], { method: 'HEAD' });
+                    if (r.ok) { window.open('/assets/drawings/' + part + '.' + exts[k], '_blank'); return; }
+                } catch (e) {}
+            }
+            window.location.href = '/html/contact-us.html?msg=' + encodeURIComponent(el.getAttribute('data-msg'));
         }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
