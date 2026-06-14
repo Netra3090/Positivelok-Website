@@ -11,7 +11,6 @@
     <link rel="icon" type="image/png" href="../assets/Icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +27,7 @@
 <!-- Hero Banner -->
 <section class="contact-hero">
     <div class="container h-100 d-flex align-items-center">
-        <div data-aos="fade-up">
+        <div>
             <p class="text-uppercase tracking-wider mb-2" style="color: var(--secondary-color); font-weight: 700;">Reach Out</p>
             <h1 class="display-4 fw-bold text-white mb-3">Contact Us</h1>
             <p class="text-light opacity-75 fs-5">We'd love to hear from you. Let's talk about your requirements.</p>
@@ -47,7 +46,7 @@
         <div class="row g-5 align-items-start">
 
             <!-- Left: Info Cards -->
-            <div class="col-lg-5" data-aos="fade-right">
+            <div class="col-lg-5">
                 <p class="text-uppercase tracking-wider fw-bold mb-2" style="color: var(--secondary-color);">Get in Touch</p>
                 <h2 class="display-6 fw-bold text-dark mb-2">We're Here to Help</h2>
                 <p class="text-muted mb-5">Our team of engineering experts is ready to answer your questions and provide personalized solutions for your machining needs.</p>
@@ -96,7 +95,7 @@
             </div>
 
             <!-- Right: Form -->
-            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="20">
+            <div class="col-lg-7">
                 <div class="contact-form-card rounded-4 p-5 shadow-sm">
                     <h4 class="fw-bold mb-1 text-dark">Send Us a Message</h4>
                     <p class="text-muted mb-4">Fill in the form below and we'll get back to you within 24 hours.</p>
@@ -151,11 +150,8 @@
             .catch(e => console.error(e));
     </script>
 </footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    AOS.init({ duration: 300, easing: 'ease-out-cubic', once: true, offset: 40 });
 
     // Pre-fill the message when arriving from a "request drawing" link
     (function () {
