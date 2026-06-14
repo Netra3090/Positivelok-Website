@@ -58,12 +58,12 @@ body {
 /* Staggered hero entrance */
 .home-content > * {
   opacity: 0;
-  animation: fadeUp 0.8s ease-out forwards;
+  animation: fadeUp 0.5s ease-out forwards;
 }
-.home-content h5 { animation-delay: 0.15s; }
-.home-content h1 { animation-delay: 0.35s; }
-.home-content p  { animation-delay: 0.55s; }
-.home-content .acc-button { animation-delay: 0.75s; }
+.home-content h5 { animation-delay: 0.05s; }
+.home-content h1 { animation-delay: 0.15s; }
+.home-content p  { animation-delay: 0.25s; }
+.home-content .acc-button { animation-delay: 0.35s; }
 
 .home-content h5 {
   color: #ffffff;

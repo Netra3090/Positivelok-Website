@@ -108,11 +108,11 @@
 
         async function openDrawing(el) {
             var part = el.getAttribute('data-part');
-            var exts = ['pdf', 'png', 'jpg', 'jpeg', 'PDF'];
-            for (var k = 0; k < exts.length; k++) {
+            var urls = ['/assets/2D-pdf/W-' + part + '_2D.pdf', '/assets/drawings/' + part + '.pdf', '/assets/drawings/' + part + '.png', '/assets/drawings/' + part + '.jpg'];
+            for (var k = 0; k < urls.length; k++) {
                 try {
-                    var r = await fetch('/assets/drawings/' + part + '.' + exts[k], { method: 'HEAD' });
-                    if (r.ok) { window.open('/assets/drawings/' + part + '.' + exts[k], '_blank'); return; }
+                    var r = await fetch(urls[k], { method: 'HEAD' });
+                    if (r.ok) { window.open(urls[k], '_blank'); return; }
                 } catch (e) {}
             }
             window.location.href = '/html/contact-us.html?msg=' + encodeURIComponent(el.getAttribute('data-msg'));
@@ -120,6 +120,6 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 40 });</script>
+    <script>AOS.init({ duration: 450, easing: 'ease-out-cubic', once: true, offset: 40 });</script>
 </body>
 </html>
