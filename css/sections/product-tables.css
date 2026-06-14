@@ -52,12 +52,27 @@ th, td {
     .spec-table,
     .container-specs-and-dimension table,
     .specifications table,
-    .dimensions table {
-        font-size: 0.85rem;
+    .dimensions table,
+    .downloads table {
+        font-size: 0.72rem;
     }
 
     th, td {
-        padding: 6px 8px;
+        padding: 4px 6px;
+    }
+
+    .specifications h2,
+    .dimensions h2,
+    .downloads h2 {
+        font-size: 1.25rem;
+    }
+
+    .downloads .drawing-link img {
+        width: 24px;
+    }
+
+    .downloads-note {
+        font-size: 0.78rem;
     }
 }
 
