@@ -53,6 +53,11 @@
     transition: none !important;
 }
 
+/* Mobile swipe carousel — hidden on desktop, shown instead of the flipbook on phones */
+.catalog-mobile {
+    display: none;
+}
+
 /* ================== Flipbook Controls ================== */
 .flipbook-controls {
     display: flex;
@@ -140,11 +145,33 @@
 /* ================== Responsive ================== */
 @media (max-width: 768px) {
     .catalog-viewer-section {
-        padding: 30px 0 24px;
+        padding: 24px 0 20px;
     }
+    /* Hide the desktop flipbook, show the swipe carousel */
     .catalog-viewer-wrap {
-        padding: 10px;
-        max-width: calc(100vw - 20px);
+        display: none;
+    }
+    .catalog-mobile {
+        display: flex;
+        width: 100%;
+        max-width: calc(100vw - 24px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        scrollbar-width: none;
+    }
+    .catalog-mobile::-webkit-scrollbar {
+        display: none;
+    }
+    .catalog-mobile img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        scroll-snap-align: center;
+        background: #fff;
     }
     .flipbook-controls {
         flex-wrap: wrap;
