@@ -53,8 +53,17 @@ body {
 
 .home-content {
   max-width: 800px;
-  animation: fadeUp 1s ease-out forwards;
 }
+
+/* Staggered hero entrance */
+.home-content > * {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.home-content h5 { animation-delay: 0.15s; }
+.home-content h1 { animation-delay: 0.35s; }
+.home-content p  { animation-delay: 0.55s; }
+.home-content .acc-button { animation-delay: 0.75s; }
 
 .home-content h5 {
   color: #ffffff;
@@ -85,6 +94,35 @@ body {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero scroll-down cue */
+.hero-scroll-cue {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  text-decoration: none;
+  z-index: 2;
+  animation: heroBounce 2s ease-in-out infinite;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.hero-scroll-cue:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+@keyframes heroBounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 9px); }
 }
 
 /* ================== Intro Section ================== */
