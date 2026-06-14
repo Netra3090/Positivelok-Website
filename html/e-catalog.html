@@ -207,6 +207,12 @@
             else $flipbook.turn('previous');
         };
 
+        // Keyboard navigation (desktop): left/right arrows flip pages
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') window.catalogPrev();
+            else if (e.key === 'ArrowRight') window.catalogNext();
+        });
+
         function apply() {
             if (window.innerWidth < MOBILE_BREAK) {
                 if (mode !== 'swipe') { destroyBook(); mode = 'swipe'; mobileEl.scrollLeft = 0; setIndicator(1); }
