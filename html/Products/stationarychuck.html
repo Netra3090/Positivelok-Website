@@ -49,13 +49,7 @@
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="/assets/products/Power-Chuck.jpg" id="MainImg" alt="Stationary Chuck">
-                <div class="small-img-group">
-                    <div class="small-img-col"><img src="/assets/products/Power-Chuck.jpg" width="100%" class="small-img" alt=""></div>
-                    <div class="small-img-col"><img src="/assets/products/Collet-Chucks.jpeg" width="100%" class="small-img" alt=""></div>
-                    <div class="small-img-col"><img src="/assets/products/SJ.jpeg" width="100%" class="small-img" alt=""></div>
-                    <div class="small-img-col"><img src="/assets/products/Rotary-Cylinders.jpg" width="100%" class="small-img" alt=""></div>
-                </div>
+                <div class="prod-gallery"><img class="img-fluid w-100 prod-gallery-main" src="/assets/products/placeholder.svg" id="MainImg" alt="Photo coming soon"></div>
             </div>
             <div class="col-lg-6 col-md-12 col-12">
                 <h6>Products / Stationary Chuck</h6>
@@ -106,7 +100,7 @@
         var MainImg = document.getElementById('MainImg');
         var smallimg = document.getElementsByClassName('small-img');
         for (var i = 0; i < smallimg.length; i++) {
-            smallimg[i].addEventListener('click', function () { MainImg.src = this.src; });
+            smallimg[i].addEventListener('click', function () { if (MainImg) MainImg.src = this.src; });
         }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

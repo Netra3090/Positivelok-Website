@@ -47,6 +47,50 @@
     padding-bottom: 1.5rem;
 }
 
+/* ================== Product photo gallery (uniform across all pages) ================== */
+.prod-gallery {
+    position: sticky;
+    top: 100px;
+}
+.prod-gallery-main {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #f7f9fb;
+    border: 1px solid #eef1f4;
+    border-radius: 12px;
+    padding: 14px;
+}
+.small-img-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.small-img-col {
+    flex: 0 0 auto;
+    width: 84px;
+    cursor: pointer;
+}
+.small-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: #f7f9fb;
+    border: 1px solid #eef1f4;
+    border-radius: 8px;
+    padding: 6px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.small-img:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+@media (max-width: 991.98px) {
+    .prod-gallery { position: static; margin-bottom: 1.5rem; }
+}
+
 /* Sub-table caption (e.g. Soft Jaw variants, dimension tables) */
 .table-caption {
     font-size: 1.05rem;
