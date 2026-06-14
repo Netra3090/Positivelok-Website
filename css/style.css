@@ -41,7 +41,7 @@ body {
   min-height: 520px;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   display: flex;
   align-items: center;
   position: relative;
@@ -244,7 +244,7 @@ body {
   background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('../assets/3.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   min-height: 60vh;
 }
 
