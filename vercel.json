@@ -1,0 +1,3 @@
+{
+  "buildCommand": "vite build && cp -R css js assets html dist/"
+}
