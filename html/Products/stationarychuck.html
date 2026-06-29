@@ -70,7 +70,7 @@
                 <div class="specifications"><h2>Specifications</h2><table class="spec-table"><thead><tr><th rowspan="3">Piston Stroke</th><th colspan="2">Maximum Allowable Pressure</th><th colspan="4">Maximum Thrust</th><th rowspan="3">Weight</th><th rowspan="3">Matching Chuck Size</th></tr><tr><th rowspan="2">Pneumatic</th><th rowspan="2">Hydraulic</th><th rowspan="2">Pneumatic</th><th>0.6 MPa</th><th rowspan="2">Hydraulic</th><th>1.5 MPa</th></tr><tr><th>6 kgf/cm2</th><th>15.3 kgf/cm2</th></tr></thead><tbody><tr><td rowspan="2">12 mm</td><td>0.7 MPa</td><td>1.5 MPa</td><td>Push</td><td>8.5 kN 867 kgf</td><td>Push</td><td>20.8 kN 2121 kgf</td><td rowspan="2">22.3 kg</td><td rowspan="2">6 Inch</td></tr><tr><td>7 kgf/cm2</td><td>7 kgf/cm2</td><td>Pull</td><td>8.1 kN 826 kgf</td><td>Pull</td><td>20.1 kN 2050 kgf</td></tr></tbody></table></div><div class="dimensions"><h2>Dimensions</h2><table><tbody><tr><td class="table-placeholder">Dimensional drawings and data will be updated soon.</td></tr></tbody></table></div>
                 <div class="downloads">
                     <h2>Downloads</h2>
-                    <p class="downloads-note">Click a model to request its 2D drawing — our team will share it with you.</p>
+                    <p class="downloads-note">Click a model to view its 2D drawing. If unavailable, you will be directed to our enquiry page.</p>
                     <table>
                         <thead><th>Model</th><th>2D Drawing</th></thead>
                         <tbody>
@@ -93,17 +93,7 @@
         </script>
     </footer>
 
-    <script>
-        var MainImg = document.getElementById('MainImg');
-        var smallimg = document.getElementsByClassName('small-img');
-        for (var i = 0; i < smallimg.length; i++) {
-            smallimg[i].addEventListener('click', function () { if (MainImg) MainImg.src = this.src; });
-        }
-
-        function openDrawing(el) {
-            window.location.href = '/html/contact-us.html?msg=' + encodeURIComponent(el.getAttribute('data-msg'));
-        }
-    </script>
+    <script src="/js/product-utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>

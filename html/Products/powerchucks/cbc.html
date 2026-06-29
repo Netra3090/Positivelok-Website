@@ -71,7 +71,7 @@
                 <div class="specifications"><h2>Specifications</h2><table class="spec-table"><tbody><tr><td class="table-placeholder">Detailed specifications for this product will be updated soon. Please <a href="/html/contact-us.html">contact us</a> for data.</td></tr></tbody></table></div><div class="dimensions"><h2>Dimensions</h2><table><tbody><tr><td class="table-placeholder">Dimensional drawings and data will be updated soon.</td></tr></tbody></table></div>
                 <div class="downloads">
                     <h2>Downloads</h2>
-                    <p class="downloads-note">Click a model to request its 2D drawing — our team will share it with you.</p>
+                    <p class="downloads-note">Click a model to view its 2D drawing. If unavailable, you will be directed to our enquiry page.</p>
                     <table>
                         <thead><th>Model</th><th>2D Drawing</th></thead>
                         <tbody>
@@ -94,17 +94,7 @@
         </script>
     </footer>
 
-    <script>
-        var MainImg = document.getElementById('MainImg');
-        var smallimg = document.getElementsByClassName('small-img');
-        for (var i = 0; i < smallimg.length; i++) {
-            smallimg[i].addEventListener('click', function () { if (MainImg) MainImg.src = this.src; });
-        }
-
-        function openDrawing(el) {
-            window.location.href = '/html/contact-us.html?msg=' + encodeURIComponent(el.getAttribute('data-msg'));
-        }
-    </script>
+    <script src="/js/product-utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>
