@@ -80,25 +80,6 @@ async function openDrawing(el) {
 }
 #lb-close:hover { background: rgba(255,255,255,0.25); }
 
-#lb-download {
-    position: fixed;
-    top: 18px;
-    right: 72px;
-    background: rgba(255,255,255,0.12);
-    border: 1.5px solid rgba(255,255,255,0.3);
-    color: #fff;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-    text-decoration: none;
-    z-index: 2;
-}
-#lb-download:hover { background: rgba(255,255,255,0.25); }
 
 #lb-hint {
     position: fixed;
@@ -136,25 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
         <div id="lb-backdrop"></div>
         <div id="lb-container">
             <button id="lb-close" aria-label="Close">&times;</button>
-            <a id="lb-download" aria-label="Download image" download>
-                <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
-                    <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/>
-                </svg>
-            </a>
             <img id="lb-img" src="" alt="Product image">
             <span id="lb-hint">Scroll or click to zoom &nbsp;·&nbsp; Esc to close</span>
         </div>
     `;
     document.body.appendChild(lb);
 
-    const lbImg      = document.getElementById('lb-img');
-    const lbDownload = document.getElementById('lb-download');
+    const lbImg = document.getElementById('lb-img');
     let scale = 1;
 
     function openLightbox(src) {
         lbImg.src = src;
-        lbDownload.href = src;
-        lbDownload.download = src.split('/').pop();
         scale = 1;
         lbImg.style.transform = 'scale(1)';
         lbImg.style.cursor = 'zoom-in';
